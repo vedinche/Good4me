@@ -14,6 +14,546 @@
 
 <body>
 
+  <header class="header">
+    <div class="container">
+      <div class="header-top">
+        <div class="header-top__left">
+          <p class="header__text">
+            Afterpay, Laybuy &amp;&nbsp;Genoapay&nbsp;| Free Delivery New Zealand + Australia*
+          </p>
+        </div>
+        <div class="header-top__right">
+          <form class="form header__form">
+            <button class="btn-reset form__btn">
+              Sign In / Register
+            </button>
+          </form>
+          <div class="currency header__currency">
+            <select class="currency__select" name="currencies" id="currency-select">
+              <opion class="currency__usd" value="usd">
+                USD
+              </opion>
+              <opion class="currency__eur" value="eur">
+                EUR
+              </opion>
+              <opion class="currency__gbp" value="gbp">
+                GBP
+              </opion>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="header-bottom">
+        <a class="logo header__logo" href="#!">
+          <img src="icons/logo.png" alt="Logotype">
+        </a>
+        <nav class="nav">
+          <ul class="nav__list list-reset flex">
+            <li class="nav__item">
+              <a class="nav__link nav__link--active" href="#!">
+                HOME
+              </a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#!">
+                SHOP
+              </a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#!">
+                FAQ'S
+              </a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#!">
+                STOCKISTS
+              </a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#!">
+                WHOLESALE
+              </a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#!">
+                CONTACT
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="header-bottom__right">
+        <form class="search-form">
+          <button class="search-form__btn btn-reset">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_9160_172)">
+                <path
+                  d="M21.7312 20.4352L15.475 14.179C16.6868 12.6821 17.4165 10.78 17.4165 8.70842C17.4165 3.90696 13.5097 0.000152588 8.70822 0.000152588C3.90677 0.000152588 0 3.90692 0 8.70837C0 13.5098 3.90681 17.4166 8.70826 17.4166C10.7799 17.4166 12.682 16.687 14.1789 15.4752L20.4351 21.7313C20.6138 21.9101 20.8484 21.9999 21.0831 21.9999C21.3178 21.9999 21.5525 21.9101 21.7312 21.7313C22.0896 21.3729 22.0896 20.7936 21.7312 20.4352ZM8.70826 15.5833C4.91695 15.5833 1.83333 12.4997 1.83333 8.70837C1.83333 4.91706 4.91695 1.83344 8.70826 1.83344C12.4996 1.83344 15.5832 4.91706 15.5832 8.70837C15.5832 12.4997 12.4995 15.5833 8.70826 15.5833Z"
+                  fill="#454545" />
+              </g>
+              <defs>
+                <clipPath id="clip0_9160_172">
+                  <rect width="22" height="22" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+          </button>
+        </form>
+        <div class="cart">
+          <svg width="21" height="24" viewBox="0 0 21 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M15.2523 6.64357H14.3686V5.3685C14.3685 2.40813 11.9602 0 8.99991 0C6.03966 0 3.63119 2.40847 3.63119 5.3685V6.64357H2.74748C1.31064 6.64357 0.141602 7.81261 0.141602 9.24944V21.3941C0.141602 22.8313 1.31064 24 2.74748 24H15.2522C16.6891 24 17.8581 22.8312 17.8581 21.3941V9.24944C17.8581 7.81261 16.6891 6.64357 15.2523 6.64357ZM5.33124 5.3685C5.33124 3.34569 6.97688 1.70005 8.99991 1.70005C11.0227 1.70005 12.6684 3.34569 12.6684 5.3685V6.64357H5.33124V5.3685ZM16.1582 21.3941C16.1582 21.894 15.7516 22.2999 15.2523 22.2999H2.74737C2.24787 22.2999 1.84154 21.8936 1.84154 21.3941V9.24944C1.84154 8.74994 2.24787 8.34361 2.74737 8.34361H3.63108V9.53567C3.35792 9.77363 3.18174 10.1202 3.18174 10.5112C3.18174 11.2289 3.76346 11.8109 4.48116 11.8109C5.19862 11.8109 5.78058 11.2289 5.78058 10.5112C5.78058 10.1205 5.60428 9.77397 5.33124 9.53567V8.34361H12.6684V9.53567C12.3952 9.77363 12.219 10.1202 12.219 10.5112C12.219 11.2289 12.8007 11.8109 13.5184 11.8109C14.2361 11.8109 14.8179 11.2289 14.8179 10.5112C14.8179 10.1205 14.6416 9.77363 14.3685 9.53567V8.34361H15.2522C15.7517 8.34361 16.1581 8.74994 16.1581 9.24944V21.3941H16.1582Z"
+              fill="#454545" />
+            <path
+              d="M16.25 8.5C16.25 8.90667 16.29 9.28333 16.37 9.63C16.45 9.97 16.5667 10.2667 16.72 10.52C16.8733 10.7667 17.0567 10.96 17.27 11.1C17.49 11.2333 17.7333 11.3 18 11.3C18.2733 11.3 18.5167 11.2333 18.73 11.1C18.9433 10.96 19.1267 10.7667 19.28 10.52C19.4333 10.2667 19.55 9.97 19.63 9.63C19.71 9.28333 19.75 8.90667 19.75 8.5C19.75 8.09333 19.71 7.72 19.63 7.38C19.55 7.03333 19.4333 6.73667 19.28 6.49C19.1267 6.23667 18.9433 6.04333 18.73 5.91C18.5167 5.77 18.2733 5.7 18 5.7C17.7333 5.7 17.49 5.77 17.27 5.91C17.0567 6.04333 16.8733 6.23667 16.72 6.49C16.5667 6.73667 16.45 7.03333 16.37 7.38C16.29 7.72 16.25 8.09333 16.25 8.5ZM15.4 8.5C15.4 7.8 15.51 7.18 15.73 6.64C15.95 6.1 16.2533 5.67667 16.64 5.37C17.0333 5.05667 17.4867 4.9 18 4.9C18.5133 4.9 18.9633 5.05667 19.35 5.37C19.7433 5.67667 20.05 6.1 20.27 6.64C20.49 7.18 20.6 7.8 20.6 8.5C20.6 9.2 20.49 9.82 20.27 10.36C20.05 10.9 19.7433 11.3267 19.35 11.64C18.9633 11.9467 18.5133 12.1 18 12.1C17.4867 12.1 17.0333 11.9467 16.64 11.64C16.2533 11.3267 15.95 10.9 15.73 10.36C15.51 9.82 15.4 9.2 15.4 8.5Z"
+              fill="white" />
+          </svg>
+          <span class="cart__count">0</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="hero">
+      <div class="container">
+        <div class="hero__content">
+          <h1 class="hero__title">
+            Good4Me
+          </h1>
+          <h2 class="hero__subtitle subtitle-bg">
+            Apple Cider Vinegar
+          </h2>
+          <p class="hero__descr">
+            Good4Me Apple Cider Vinegar gummies are the newest addition to&nbsp;your morning health and well-being
+            regime.
+          </p>
+        </div>
+        <button class="hero__btn btn-sm btn-reset btn--fill">
+          Shop Now
+        </button>
+      </div>
+    </section>
+
+    <section class="deal">
+      <div class="container">
+        <h2 class="deal__title section-title">
+          GOOD4ME DEAL
+        </h2>
+        <p class="deal__descr">
+          Pick your beauty products today.&nbsp;50% OFF on&nbsp;the most popular GOOD4ME. Order all classy products
+          today!
+        </p>
+        <ul class="deal__list list-reset flex">
+          <li class="deal__item">
+            <img class="deal__img" src="img/multi.webp" alt="MULTI-VITAMIN: EVERYDAY WELLNESS">
+            <h3 class="deal__subtitle">
+              MULTI-VITAMIN: EVERYDAY WELLNESS
+            </h3>
+          </li>
+          <li class="deal__item">
+            <img class="deal__img" src="img/full.webp" alt="FULL RANGE VALUE PACK (SAVE 33%)">
+            <h3 class="deal__subtitle">
+              FULL&nbsp;RANGE VALUE PACK (SAVE&nbsp;33%)
+            </h3>
+          </li>
+          <li class="deal__item">
+            <img class="deal__img" src="img/immunity.webp" alt="VITAMIN C: IMMUNITY SUPPORT">
+            <h3 class="deal__subtitle">
+              VITAMIN C: IMMUNITY SUPPORT
+            </h3>
+          </li>
+          <li class="deal__item">
+            <img class="deal__img" src="img/energy.webp" alt="IRON: ENERGY SUPPORT">
+            <h3 class="deal__subtitle">
+              IRON: ENERGY SUPPORT
+            </h3>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="advantages">
+      <div class="advantages__wrap">
+        <ul class="advantages__list list-reset flex">
+          <li class="advantages__item">
+            <h3 class="advantages__title">
+              WORLDWIDE SHIPPING
+            </h3>
+            <p class="advantages__descr">
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+            </p>
+          </li>
+          <li class="advantages__item">
+            <h3 class="advantages__title">
+              30 DAYS GUARANTEE
+            </h3>
+            <p class="advantages__descr">
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+            </p>
+          </li>
+          <li class="advantages__item">
+            <h3 class="advantages__title">
+              SECURED PAYMENTS
+            </h3>
+            <p class="advantages__descr">
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+            </p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="control">
+      <div class="container">
+        <div class="control__contant">
+          <h2 class="control__title">
+            TAKE CONTROL OF&nbsp;YOUR HEALTH
+          </h2>
+          <p class="control__descr">
+            The Good4Me range has been formulated based on&nbsp;scientific &amp;&nbsp;traditional evidence.
+          </p>
+          <p class="control__descr">
+            Our vitamins are here and ready to&nbsp;boost your mood, immunity and overall well-being!
+          </p>
+          <p class="control__descr">
+            Made in&nbsp;New Zealand from local and imported ingredients.
+          </p>
+          <button class="control__btn btn-bg btn--stroke btn-reset">
+            BROWSE OUR RANGE
+          </button>
+        </div>
+        <div class="control-images">
+          <div class="control-images__left">
+            <img class="control__small-img" src="img/control-1.webp" alt="hair skin">
+            <img class="control__small-img" src="img/control-2.webp" alt="apple cider vinegar">
+          </div>
+          <div class="control__images__right">
+            <img class="control__big-img" src="img/control-3.webp" alt="more vitamins">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="products">
+      <div class="container">
+        <h2 class="products__title section-title">
+          OUR PRODUCTS ARE
+        </h2>
+        <ul class="prices">
+          <li class="prices__item">
+            <a class="prices__link" href="#!">
+              <img class="prices__img" src="img/product-1.webp" alt="multi-vitamin (3 month supply)">
+            </a>
+            <h3 class="prices__subtitle">
+              MULTI-VITAMIN (3&nbsp;MONTH SUPPLY)
+            </h3>
+            <div class="prices__value">
+              <span class="prices__current-value">
+                $39.95&nbsp;NZD
+              </span>
+              <span class="prices__old-value">
+                $199.75&nbsp;NZD
+              </span>
+            </div>
+          </li>
+          <li class="products__item">
+            <a class="prices__link" href="#!">
+              <img class="prices__img" src="img/product-2.webp" alt="vitamin c: immunity support">
+            </a>
+            <span class="prices__sale">
+              ON SALE
+            </span>
+            <h3 class="prices__subtitle">
+              VITAMIN C: IMMUNITY SUPPORT
+            </h3>
+            <div class="prices__value">
+              <span class="prices__current-value">
+                $39.95&nbsp;NZD
+              </span>
+              <span class="prices__old-value">
+                $199.75&nbsp;NZD
+              </span>
+            </div>
+          </li>
+          <li class="products__item">
+            <a class="prices__link" href="#!">
+              <img class="prices__img" src="img/product-3.webp" alt="multi-vitamin (3 month supply)">
+            </a>
+            <span class="prices__sale">
+              ON SALE
+            </span>
+            <h3 class="prices__subtitle">
+              MULTI-VITAMIN (3&nbsp;MONTH SUPPLY)
+            </h3>
+            <div class="prices__value">
+              <span class="prices__current-value">
+                $39.95&nbsp;NZD
+              </span>
+              <span class="prices__old-value">
+                $199.75&nbsp;NZD
+              </span>
+            </div>
+          </li>
+          <li class="products__item">
+            <a class="prices__link" href="#!">
+              <img class="prices__img" src="img/product-4.webp" alt="apple cider vinegar (3 month supply)">
+            </a>
+            <span class="prices__sale">
+              ON SALE
+            </span>
+            <h3 class="prices__subtitle">
+              APPLE CIDER VINEGAR (3 MONTH SUPPLY)
+            </h3>
+            <div class="prices__value">
+              <span class="prices__current-value">
+                $39.95&nbsp;NZD
+              </span>
+              <span class="prices__old-value">
+                $199.75&nbsp;NZD
+              </span>
+            </div>
+          </li>
+        </ul>
+        <button class="products__btn btn-bg btn-reset btn--stroke">
+          VIEW ALL PRODUCTS
+        </button>
+      </div>
+    </section>
+
+    <section class="reviews">
+      <div class="container">
+        <article class="reviews__contant">
+          <h2 class="reviews__title">
+            REAL REVIEWS
+          </h2>
+          <h3 class="reviews__subtitle">
+            REAL RESULTS
+          </h3>
+          <div class="rating-result reviews__rating">
+            <span class="rating-result--active"></span>
+            <span class="rating-result--active"></span>
+            <span class="rating-result--active"></span>
+            <span class="rating-result--inactive"></span>
+            <span class="rating-result--inactive"></span>
+          </div>
+          <p class="reviews__text">
+            &laquo;We&nbsp;have perfected our formulas over time, based on&nbsp;your feedback. Check out hundreds
+            of&nbsp;reviews on&nbsp;our website.We can&rsquo;t wait until you are a&nbsp;part of&nbsp;our Good4Me
+            Family.&raquo;
+          </p>
+          <span class="reviews__name">
+            _Chloe H.
+          </span>
+          <div class="reviews__btns">
+            <button class="reviews__btn-left btn-reset"></button>
+            <button class="reviews__btn-right btn--active btn-reset"></button>
+          </div>
+        </article>
+        <div class="reviews__img">
+          <img src="img/review.webp" alt="good4me review">
+        </div>
+      </div>
+    </section>
+
+    <section class="shop">
+      <div class="container">
+        <h2 class="shop__title section-title">
+          SHOP ALL
+        </h2>
+        <ul class="prices">
+          <li class="prices__item">
+            <a class="prices__link" href="#!">
+              <img class="prices__img" src="img/shop-1.webp" alt="pre-order hair, skin & nails (5 month supply)">
+            </a>
+            <span class="prices__sale">
+              ON SALE
+            </span>
+            <h3 class="prices__subtitle">
+              **PRE-ORDER** HAIR, SKIN &amp;&nbsp;NAILS (5&nbsp;MONTH SUPPLY)
+            </h3>
+            <div class="prices__value">
+              <span class="prices__current-value">
+                $39.95&nbsp;NZD
+              </span>
+              <span class="prices__old-value">
+                $199.75&nbsp;NZD
+              </span>
+            </div>
+          </li>
+          <li class="products__item">
+            <a class="prices__link" href="#!">
+              <img class="prices__img" src="img/shop-2.webp" alt="detox + bloat support value pack">
+            </a>
+            <span class="prices__sale">
+              ON SALE
+            </span>
+            <h3 class="prices__subtitle">
+              DETOX + BLOAT SUPPORT VALUE PACK
+            </h3>
+            <div class="prices__value">
+              <span class="prices__current-value">
+                $39.95&nbsp;NZD
+              </span>
+              <span class="prices__old-value">
+                $199.75&nbsp;NZD
+              </span>
+            </div>
+          </li>
+          <li class="products__item">
+            <a class="prices__link" href="#!">
+              <img class="prices__img" src="img/shop-3.webp" alt="probiotics: gut health + bloat support">
+            </a>
+            <span class="prices__sale">
+              ON SALE
+            </span>
+            <h3 class="prices__subtitle">
+              PROBIOTICS: GUT HEALTH + BLOAT SUPPORT
+            </h3>
+            <div class="prices__value">
+              <span class="prices__current-value">
+                $39.95&nbsp;NZD
+              </span>
+              <span class="prices__old-value">
+                $199.75&nbsp;NZD
+              </span>
+            </div>
+          </li>
+          <li class="products__item">
+            <a class="prices__link" href="#!">
+              <img class="prices__img" src="img/shop-4.webp" alt="apple cider vinegar">
+            </a>
+            <span class="prices__sale">
+              ON SALE
+            </span>
+            <h3 class="prices__subtitle">
+              APPLE CIDER VINEGAR
+            </h3>
+            <div class="prices__value">
+              <span class="prices__current-value">
+                $39.95&nbsp;NZD
+              </span>
+              <span class="prices__old-value">
+                $199.75&nbsp;NZD
+              </span>
+            </div>
+          </li>
+        </ul>
+        <button class="shop__btn btn-bg btn-reset btn--stroke">
+          VIEW ALL PRODUCTS
+        </button>
+      </div>
+    </section>
+
+    <section class="news">
+      <div class="news__wrap">
+        <h2 class="news__title section-title">
+          LATEST NEWS
+        </h2>
+        <div class="news__list">
+          <article class="news__item">
+            <img class="news__img" src="img/news-1.webp" alt="we donate one weeks supply">
+            <time class="news__date">
+              August 26, 2020
+            </time>
+            <h3 class="news__subtitle">
+              WE&nbsp;DONATE ONE WEEKS SUPPLY
+            </h3>
+            <p class="news__descr">
+              We&nbsp;care about New Zealand children, and we&nbsp;want to&nbsp;support our community by&nbsp;providing
+              our children in&nbsp;need with necessary vitamins to&nbsp;improve....
+            </p>
+            <button class="news__btn btn-sm btn--fill btn-reset">
+              Read more
+            </button>
+          </article>
+          <article class="news__item">
+            <img class="news__img" src="img/news-2.webp" alt="we donate one weeks supply">
+            <time class="news__date">
+              August 26, 2020
+            </time>
+            <h3 class="news__subtitle">
+              WE&nbsp;DONATE ONE WEEKS SUPPLY
+            </h3>
+            <p class="news__descr">
+              We&nbsp;care about New Zealand children, and we&nbsp;want to&nbsp;support our community by&nbsp;providing
+              our children in&nbsp;need with necessary vitamins to&nbsp;improve....
+            </p>
+            <button class="news__btn btn-sm btn--fill btn-reset">
+              Read more
+            </button>
+          </article>
+          <article class="news__item">
+            <img class="news__img" src="img/news-3.webp" alt="we donate one weeks supply">
+            <time class="news__date">
+              August 26, 2020
+            </time>
+            <h3 class="news__subtitle">
+              WE&nbsp;DONATE ONE WEEKS SUPPLY
+            </h3>
+            <p class="news__descr">
+              We&nbsp;care about New Zealand children, and we&nbsp;want to&nbsp;support our community by&nbsp;providing
+              our children in&nbsp;need with necessary vitamins to&nbsp;improve....
+            </p>
+            <button class="news__btn btn-sm btn--fill btn-reset">
+              Read more
+            </button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="social-media">
+      <h2 class="social-media__title section-title">
+        #GOOD4ME
+      </h2>
+      <ul class="social-media__list">
+        <li class="social-media__item">
+          <img class="social-media__img" src="img/card-1.webp" alt="social media image">
+        </li>
+        <li class="social-media__item">
+          <img class="social-media__img" src="img/card-2.webp" alt="social media image">
+        </li>
+        <li class="social-media__item">
+          <img class="social-media__img" src="img/card-3.webp" alt="social media image">
+        </li>
+        <li class="social-media__item">
+          <img class="social-media__img" src="img/card-4.webp" alt="social media image">
+        </li>
+        <li class="social-media__item">
+          <img class="social-media__img" src="img/card-5.webp" alt="social media image">
+        </li>
+        <li class="social-media__item">
+          <img class="social-media__img" src="img/card-6.webp" alt="social media image">
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__contant">
+          <a class="logo footer__logo" href="#!">
+            <img src="icons/logo.png" alt="Logotype">
+          </a>
+          <p class="footer__descr">
+            Good health is&nbsp;important, so&nbsp;all of&nbsp;our products have been carefully designed to&nbsp;bring
+            out the best in&nbsp;you.
+          </p>
+        </div>
+        <div class="subscribe footer__subscribe">
+          <h3 class="subscribe__title">
+            Keep In&nbsp;Touch
+          </h3>
+          <p class="subscribe__descr">
+            Subscribe to&nbsp;receive new product updates, be&nbsp;the first to&nbsp;know about sales, and more.
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
 </body>
 
 </html>
