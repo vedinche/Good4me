@@ -153,7 +153,9 @@ body {
 
 /* #region---header */
 .header-top {
-  padding: 15px 0;
+  position: relative;
+  padding-top: 16px;
+  padding-bottom: 8px;
   justify-content: space-between;
   background: var(--color-orange);
 }
@@ -179,85 +181,139 @@ body {
   color: var(--color-white);
 }
 
-.header__currency {
-  padding-left: 20px;
-}
-
 .currency {
   position: relative;
-  margin-top: 0;
-  display: inline-block;
-  width: auto;
-}
-
-.currency select {
-  display: none;
-}
-
-.currency__link {
-  display: inline-block;
-  margin-left: 3px;
-  width: 0;
-  height: 0;
-  border-top: 8px solid var(--color-white);
-  border-left: 8px solid transparent;
-  border-right: 8px solid transparent;
-  cursor: pointer;
-}
-
-.currency__usd {
-  padding-left: 10px;
+  margin-right: 5px;
+  width: 92px;
+  background: url(../icons/arrow.png);
   background-repeat: no-repeat;
+  background-size: 8px 4px;
+  background-position: 83px 13px;
 }
 
-.currency__btn span {
+.currency__dropdown {
+  position: relative;
+}
+
+/* .currency__dropdown:after {
+  content: "";
+  position: absolute;
+  margin: 0;
+  width: 16px;
+  height: 17px;
+  top: 15px;
+  right: 10px;
+  -webkit-transition: .3s;
+  transition: .3s;
+} */
+
+/* .currency__dropdown.open:after {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+} */
+
+.currency__caption {
+  padding-top: 4px;
+  padding-left: 20px;
+  height: 26px;
+  background: transparent;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 150%;
+  letter-spacing: 0.3px;
+}
+
+.currency__list {
+  z-index: -1;
+  position: absolute;
+  right: -3px;
+  top: 34px;
+  padding-bottom: 20px;
+  width: 200px;
+  border-radius: 0 0 12px 12px;
+  overflow: hidden;
+  visibility: hidden;
+  background-color: var(--color-orange);
+  -webkit-box-shadow: 0px 12px 24px rgba(21, 18, 51, 0.13);
+  box-shadow: 0px 12px 24px rgba(21, 18, 51, 0.13);
+  opacity: 0;
+  -webkit-transition: all 0.2s ease-in-out, opacity 0.1s linear;
+  transition: all 0.2s ease-in-out, opacity 0.1s linear;
+  -webkit-transform: scale(0.85);
+  transform: scale(0.85);
+  -webkit-transform-origin: 50% 0;
+  transform-origin: 50% 0;
+}
+
+.currency__dropdown.open>.currency__list {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  opacity: 1;
+  z-index: 1;
+  visibility: visible;
+}
+
+.currency__item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.currency__item {
+  position: relative;
+  padding: 10px;
+  justify-content: space-between;
+  cursor: pointer;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.currency__img {
+  display: inline-block;
+  width: 25px;
+  height: 16px;
+}
+
+.currency__value {
+  font-size: 16px;
+  line-height: 20px;
+  color: var(--color-white);
+}
+
+.currency__dropdown>.currency__list>.currency__item.selected {
+  opacity: .3;
+  pointer-events: none;
+}
+
+.currency__item:hover {
+  opacity: .3;
+}
+
+.currency__dropdown>.currency__list>.currency__item .caption__value,
+.currency__dropdown>.currency__caption .caption__value {
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.3px;
+  position: absolute;
+  right: 36px;
+}
+
+.currency__dropdown>.currency__list>.currency__item .caption__value {
+  right: 20px;
+}
+
+/* .currency__btn {
   padding-left: 29px;
   background-size: 25px 16px;
   background-repeat: no-repeat;
   background-position: 2px 3px;
   color: var(--color-white);
-}
-
-.currency .currency__list {
-  position: absolute;
-  top: 0;
-  right: -16px;
-  z-index: 1;
-  margin-top: 35px;
-  padding: 30px;
-  padding: 0;
-  list-style-type: none;
-  background-color: var(--color-orange);
-}
-
-.currency .currency__list li {
-  display: none;
-}
-
-.currency .currency__list li span {
-  display: inline-block;
-  padding: 11px 15px 5px 70px;
-  min-height: 40px;
-  background-color: var(--color-orange);
-  background-position: left 10px center;
-  background-repeat: no-repeat;
-  font-size: 16px;
-  text-align: left;
-  color: var(--color-white);
-  cursor: pointer;
-  opacity: 0.8;
-}
-
-.currency .currency__list li span:hover,
-.currency .currency__list li span:focus {
-  opacity: 1;
-}
+} */
 
 .header-bottom {
   padding: 27px 0;
 }
 
 .header-bottom__container {
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -909,4 +965,5 @@ body {
 .footer__brand {
   color: var(--color-orange);
 }
+
 /* #endregion */

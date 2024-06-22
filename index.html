@@ -27,29 +27,43 @@
               Sign In / Register
             </button>
           </form>
-          <div class="currency header__currency">
-            <select name="options">
-              <option class="currency__usd" value="usd" style="background-image:url('icons/usd.png');">USD
-              </option>
-              <option class="currency__eur" value="eur" style="background-image:url('icons/eur.png');">
-                EUR
-              </option>
-              <option class="currency__gbp" value="gbp" style="background-image:url('icons/gbp.png');">
-                GBP
-              </option>
-              <option class="currency__pln" value="pln" style="background-image:url('icons/pln.png');">
-                PLN
-              </option>
-              <option class="currency__cad" value="cad" style="background-image:url('icons/cad.png');">
-                CAD
-              </option>
-              <option class="currency__jpy" value="jpy" style="background-image:url('icons/jpy.png');">
-                JPY
-              </option>
-              <option class="currency__cny" value="cny" style="background-image:url('icons/cny.png');">
-                CNY
-              </option>
-            </select>
+          <div class="currency">
+            <div class="currency__dropdown">
+              <div class="currency__caption" tabindex="0" flex>
+                <img class="currency__caption-img currency__img" src="icons/usd.png" alt="United States dollar">
+                <span class="currency__caption-value currency__value">USD</span>
+              </div>
+              <div class="currency__list">
+                <div class="currency__item selected flex" data-currency__item="USD" tabindex="0">
+                  <img class="currency__img" src="icons/usd.png" alt="United States dollar">
+                  <span class="currency__value">USD</span>
+                </div>
+                <div class="currency__item flex" data-currency__item="EUR" tabindex="0">
+                  <img class="currency__img" src="icons/eur.png" alt="Euro">
+                  <span class="currency__value">EUR</span>
+                </div>
+                <div class="currency__item flex" data-currency__item="GBP" tabindex="0">
+                  <img class="currency__img" src="icons/gbp.png" alt="Great Britain Pound">
+                  <span class="currency__value">GBP</span>
+                </div>
+                <div class="currency__item flex" data-currency__item="PLN" tabindex="0">
+                  <img class="currency__img" src="icons/pln.png" alt="PoLish New zloty">
+                  <span class="currency__value">PLN</span>
+                </div>
+                <div class="currency__item flex" data-currency__item="CAD" tabindex="0">
+                  <img class="currency__img" src="icons/cad.png" alt="Canadian dollar">
+                  <span class="currency__value">CAD</span>
+                </div>
+                <div class="currency__item flex" data-currency__item="JPY" tabindex="0">
+                  <img class="currency__img" src="icons/jpy.png" alt="Japanese yen">
+                  <span class="currency__value">JPY</span>
+                </div>
+                <div class="currency__item flex" data-currency__item="CNY" tabindex="0">
+                  <img class="currency__img" src="icons/cny.png" alt="Chinese yuan">
+                  <span class="currency__value">CNY</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

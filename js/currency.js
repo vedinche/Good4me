@@ -1,89 +1,65 @@
+// Добавляем обработчик события для клика по заголовку выпадающего меню
 document.addEventListener("DOMContentLoaded", function () {
-  /* Custom select design */
-  let currency = document.querySelector(".currency");
-  let currencyBtn = document.createElement("button");
-  currencyBtn.classList.add("currency__btn", "btn-reset");
-  // currencyBtn.setAttribute("tabindex", "0");
-  currency.appendChild(currencyBtn);
+  var currency__dropdown = document.querySelector(".currency__dropdown");
+  var currency__caption = document.querySelector(".currency__caption");
 
-  let currencyList = document.createElement("ul");
-  currencyList.classList.add("currency__list");
-  currency.appendChild(currencyList);
+  function togglecurrency__dropdown() {
+    currency__dropdown.classList.toggle("open");
+  }
 
-  let selectOptions = document.querySelectorAll(".currency select option");
-  selectOptions.forEach(function (option) {
-    let listItem = document.createElement("li");
-    let span = document.createElement("span");
-    span.setAttribute("value", option.value);
-    span.setAttribute("tabindex", "0");
-    span.style.backgroundImage = option.style.backgroundImage;
-    span.textContent = option.text;
-    listItem.appendChild(span);
-    currencyList.appendChild(listItem);
-  });
-
-  let selectedOption = document.querySelector(".currency select").value;
-  let selectedSpan = document.querySelector(
-    `.currency__list span[value="${selectedOption}"]`
-  );
-  let currencyBtnContent = document.createElement("span");
-  currencyBtnContent.style.backgroundImage = selectedSpan.style.backgroundImage;
-  currencyBtnContent.textContent = selectedSpan.textContent;
-  currencyBtn.appendChild(currencyBtnContent);
-
-  let currencyLink = document.createElement("a");
-  currencyLink.classList.add("currency__link");
-  currencyBtn.appendChild(currencyLink);
-
-  let currencyListSpans = document.querySelectorAll(
-    ".currency .currency__list span"
-  );
-  currencyListSpans.forEach(function (span) {
-    function handleClick() {
-      let ddText = span.textContent;
-      let ddImg = span.style.backgroundImage;
-      let ddVal = span.getAttribute("value");
-      currencyBtnContent.style.backgroundImage = ddImg;
-      currencyBtnContent.textContent = ddText;
-      currencyListSpans.forEach(function (s) {
-        s.parentElement.classList.remove("active");
-      });
-      span.parentElement.classList.add("active");
-      document.querySelector(".currency select[name=options]").value = ddVal;
-      document
-        .querySelectorAll(".currency .currency__list li")
-        .forEach(function (li) {
-          li.style.display = "none";
-        });
+  function handleKeyPress(event) {
+    if (event.key === "Enter") {
+      togglecurrency__dropdown();
     }
+  }
 
-    function handleKeyPress(event) {
-      // Проверяем, является ли нажатая клавиша Enter
-      if (event.keyCode === 13 || event.which === 13) {
-        handleClick();
+  currency__caption.addEventListener("click", togglecurrency__dropdown);
+  document.addEventListener("keypress", handleKeyPress);
+});
+
+// Обработчик события для клика и нажатия клавиши Enter
+function handleItemClick() {
+  // Убираем класс 'selected' у всех элементов списка
+  document
+    .querySelectorAll(".currency__dropdown > .currency__list > .currency__item")
+    .forEach(function (otherItem) {
+      otherItem.classList.remove("selected");
+    });
+
+  // Добавляем класс 'selected' к выбранному элементу
+  this.classList.add("selected");
+
+  // Обновляем текст заголовка выпадающего меню
+  const currency__caption =
+    this.parentElement.parentElement.querySelector(".currency__caption");
+  currency__caption.innerHTML = this.innerHTML;
+
+  // Закрываем выпадающее меню
+  this.parentElement.parentElement.classList.remove("open");
+}
+
+// Добавляем обработчик события для клика по элементам списка и нажатия клавиши Enter
+document
+  .querySelectorAll(".currency__dropdown > .currency__list > .currency__item")
+  .forEach(function (item) {
+    item.addEventListener("click", handleItemClick);
+    item.addEventListener("keyup", function (evt) {
+      if ((evt.keyCode || evt.which) === 13) {
+        handleItemClick.call(this);
       }
-    }
-
-    // Добавляем обработчик события клика
-    span.addEventListener("click", handleClick);
-
-    // Добавляем обработчик события нажатия клавиши Enter
-    span.addEventListener("keypress", handleKeyPress);
+    });
   });
 
-  currencyBtn.addEventListener("click", function () {
-    document
-      .querySelectorAll(".currency .currency__list li")
-      .forEach(function (li) {
-        li.style.display = "block";
-      });
-  });
+// Добавляем обработчик события для клавиши Esc
+document.addEventListener("keyup", function (evt) {
+  if ((evt.keyCode || evt.which) === 27) {
+    document.querySelector(".currency__dropdown").classList.remove("open");
+  }
+});
 
-  currencyBtn.addEventListener("keypress", function () {
-    document
-      .querySelectorAll(".currency .currency__list li")
-      .forEach(function (li) {
-        li.style.display = "block";
-      });
-  });
+// Добавляем обработчик события для клика вне выпадающего меню
+document.addEventListener("click", function (evt) {
+  if (!evt.target.closest(".currency__dropdown > .currency__caption")) {
+    document.querySelector(".currency__dropdown").classList.remove("open");
+  }
 });
