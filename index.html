@@ -22,11 +22,107 @@
           </p>
         </div>
         <div class="header-top__right flex">
-          <form class="form header__form">
-            <button class="btn-reset form__btn">
-              Sign In / Register
-            </button>
-          </form>
+          <button class="btn-reset login__form-open">
+            Sign In / Register
+          </button>
+          <div class="form-modal login-form__modal">
+            <div class="login__form-wrapper">
+              <div class="login__form-top">
+                <button class="login__form-close btn-reset">&times;</button>
+              </div>
+              <div class="login__form-container">
+                <div class="login__form-slide">
+                  <input type="radio" name="slide" id="login" checked>
+                  <input type="radio" name="slide" id="signup">
+                  <label for="login" class="slide login" tabindex="1">Sign In</label>
+                  <label for="signup" class="slide signup" tabindex="2">Register</label>
+                  <div class="slider-tab"></div>
+                </div>
+                <div class="login__form-inner">
+                  <form action="#" class="login__form login">
+                    <div class="login__form-field">
+                      <input class="login__form-input" type="text" placeholder="Email Address" required>
+                    </div>
+                    <div class="login__form-field">
+                      <input class="login__form-input" type="password" placeholder="Password" required>
+                    </div>
+                    <div class="login__form-pass"><a href="#">Forgot password?</a></div>
+                    <div class="login__form-field login__form-btn login__form-btn-login">
+                      <div class="btn-layer"></div>
+                      <input class="login__form-input" type="submit" value="Login">
+                    </div>
+                    <div class="login__form-signup">Not a member? <a href=""><span
+                          class="login__form-signup-link">Register now</span></a></div>
+                    <ul class="login__form-list list-reset">
+                      <li class="login__form-item">
+                        <a class="login__form-link" href="#!">
+                          <img class="login__form-img" src="icons/login-google.svg" alt="google">
+                        </a>
+                      </li>
+                      <li class="login__form-item">
+                        <a class="login__form-link" href="#!">
+                          <img class="login__form-img" src="icons/login-facebook.svg" alt="facebook">
+                        </a>
+                      </li>
+                      <li class="login__form-item">
+                        <a class="login__form-link" href="#!">
+                          <img class="login__form-img" src="icons/linkedin.svg" alt="linkedin">
+                        </a>
+                      </li>
+                      <li class="login__form-item">
+                        <a class="login__form-link" href="#!">
+                          <img class="login__form-img" src="icons/login-twitter.svg" alt="twitter">
+                        </a>
+                      </li>
+                    </ul>
+                  </form>
+                  <form action="#" class="login__form signup">
+                    <div class="login__form-field">
+                      <input class="login__form-input" type="text" placeholder="Email Address" required>
+                    </div>
+                    <div class="login__form-field">
+                      <input class="login__form-input" type="password" placeholder="Password" required>
+                    </div>
+                    <div class="login__form-field login__form-confirm-password">
+                      <input class="login__form-input" type="password" placeholder="Confirm password" required>
+                    </div>
+                    <label class="login__form-label" for="agree">
+                      <input class="login__form-checkbox" id="agree" type="checkbox" name="agree" checked>
+                      I&nbsp;agree to&nbsp;data processing
+                      <span class="login__form-checkbox-style"></span>
+                    </label>
+                    <div class="login__form-field login__form-btn login__form-btn-signup">
+                      <div class="btn-layer"></div>
+                      <input type="submit" value="Signup">
+                    </div>
+                    <ul class="login__form-list list-reset">
+                      <li class="login__form-item">
+                        <a class="login__form-link" href="#!">
+                          <img class="login__form-img" src="icons/login-google.svg" alt="google">
+                        </a>
+                      </li>
+                      <li class="login__form-item">
+                        <a class="login__form-link" href="#!">
+                          <img class="login__form-img" src="icons/login-facebook.svg" alt="facebook">
+                        </a>
+                      </li>
+                      <li class="login__form-item">
+                        <a class="login__form-link" href="#!">
+                          <img class="login__form-img" src="icons/linkedin.svg" alt="linkedin">
+                        </a>
+                      </li>
+                      <li class="login__form-item">
+                        <a class="login__form-link" href="#!">
+                          <img class="login__form-img" src="icons/login-twitter.svg" alt="twitter">
+                        </a>
+                      </li>
+                    </ul>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="header__top-separator"></div>
           <div class="currency">
             <div class="currency__dropdown">
               <div class="currency__caption" tabindex="0" flex>
@@ -773,9 +869,22 @@
         </div>
       </div>
     </div>
+    <div id="back_to_top" class="back-to-top">
+      <svg height="20px" width="20px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 49.656 49.656" xml:space="preserve">
+        <g>
+          <polygon style="fill:#f6623e;"
+            points="48.242,35.122 45.414,37.95 24.828,17.364 4.242,37.95 1.414,35.122 24.828,11.707 	" />
+          <path style="fill:#f6623e;" d="M45.414,39.363L24.828,18.778L4.242,39.363L0,35.121l24.828-24.828l24.828,24.828L45.414,39.363z
+        M24.828,15.95l20.586,20.585l1.414-1.414l-22-22l-22,22l1.414,1.414L24.828,15.95z" />
+        </g>
+      </svg>
+    </div>
   </footer>
 
   <script src="js/currency.js"></script>
+  <script src="js/login-form.js"></script>
+  <script src="js/main.js"></script>
 </body>
 
 </html>
