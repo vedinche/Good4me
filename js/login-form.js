@@ -23,7 +23,7 @@ let openButton = document.querySelector(".login__form-open");
 let closeButton = document.querySelectorAll(".login__form-close");
 let formModal = document.querySelector(".form-modal");
 
-// Add a 'click' event for the щзут buttons
+// Add a 'click' event for the open buttons
 openButton.addEventListener("click", function () {
   formModal.classList.add("open");
 });
