@@ -13,3 +13,13 @@ window.addEventListener("scroll", function () {
     document.querySelector(".back-to-top").classList.remove("active");
   }
 });
+
+//splide social
+var splide = new Splide(".splide", {
+  type: "loop",
+  perPage: 2,
+  fixedWidth: "318px",
+  focus: "left",
+});
+
+splide.mount();
