@@ -131,13 +131,16 @@ body {
 }
 
 .btn--fill {
+  border: 2px solid transparent;
   background: var(--color-orange);
   color: var(--color-white);
+  transition: var(--border-transition), var(--background-transition), var(--color-transition), var(--opacity-transition);
 }
 
 .btn--stroke {
   background: transparent;
   color: var(--color-black);
+  transition: var(--background-transition), var(--color-transition), var(--opacity-transition);
 }
 
 .section-wrap {
@@ -169,10 +172,11 @@ body {
 }
 
 .header__text {
+  outline: 2px solid transparent;
   font-size: 16px;
   line-height: 20px;
   color: var(--color-white);
-  transition: var(--opacity-transition);
+  transition: var(--opacity-transition), var(--outline-transition);
 }
 
 /* login form start */
@@ -181,12 +185,13 @@ body {
   margin: 0 auto;
 	padding: 0;
   border: none;
+  outline: 2px solid transparent;
 	font-size: 16px;
   line-height: 20px;
 	background-color: transparent;
   cursor: pointer;
   color: var(--color-white);
-	transition: var(--opacity-transition);
+  transition: var(--opacity-transition), var(--outline-transition);
 }
 
 .forms {
@@ -342,7 +347,7 @@ body {
 .form__btn {
   margin-bottom: 30px;
   width: 100%;
-  border: 1px solid transparent;
+  border: 2px solid transparent;
   transition: var(--color-transition), var(--background-transition), var(--border-transition);
 }
 
@@ -420,12 +425,13 @@ body {
   margin-left: 20px;
   padding-top: 4px;
   height: 26px;
-  background: transparent;
-  cursor: pointer;
+  outline: 2px solid transparent;
   font-size: 14px;
   line-height: 150%;
   letter-spacing: 0.3px;
-  transition: var(--opacity-transition);
+  background: transparent;
+  cursor: pointer;
+  transition: var(--opacity-transition), var(--outline-transition);
 }
 
 .currency__caption>.currency__value {
@@ -515,6 +521,11 @@ body {
   align-items: center;
 }
 
+.logo {
+  outline: 2px solid transparent;
+  transition: var(--outline-transition);
+}
+
 .header__logo {
   margin-right: 277px;
 }
@@ -535,12 +546,13 @@ body {
 
 .nav__link {
   padding-bottom: 2px;
+  outline: 2px solid transparent;
   font-size: 18px;
   background-image: linear-gradient(var(--color-orange), var(--color-orange));
 	background-position: 0 100%;
 	background-repeat: no-repeat;
 	background-size: 0 1px;
-	transition: var(--background-transition);
+	transition: var(--background-transition), var(--opacity-transition), var(--outline-transition);
 }
 
 .search-modal {
@@ -584,11 +596,11 @@ body {
 	height: 40px;
 	border: none;
 	border-radius: 20px;
-	font-size: 16px;
 }
 
 .search-form__input::placeholder {
-	font-size: 14px;
+	font-size: 16px;
+  color: var(--color-lightgray)
 }
 
 .search-form__input:focus {
@@ -632,15 +644,12 @@ body {
   display: block;
   position: relative;
   margin-right: 7px;
+  transition: var(--opacity-transition);
 }
 
 .cart-icon {
   fill: var(--color-gray);
   transition: var(--fill-transition);
-}
-
-.cart:hover .cart-icon {
-  fill: var(--color-orange);
 }
 
 .cart__count {
@@ -706,7 +715,7 @@ body {
 
 /* #endregion */
 
-/* #region---deal */
+/* #region---deal&prices */
 .deal {
   margin-bottom: 140px;
 }
@@ -747,6 +756,78 @@ body {
   line-height: 24px;
 }
 
+.prices {
+  margin-bottom: 58px;
+  gap: var(--gap);
+  --offsets: 3;
+}
+
+.prices__item {
+  display: flex;
+  position: relative;
+  width: calc((100% - (var(--gap) * var(--offsets))) / (var(--offsets) + 1));
+}
+
+.prices__link {
+  display: block;
+	position: relative;
+  top: 0px;
+  z-index: 0;
+  overflow: hidden;
+	transition: all 0.2s ease-in-out;
+}
+
+.prices__img {
+  margin-bottom: 20px;
+}
+
+.prices__sale {
+  display: block;
+  position: absolute;
+  top: 11px;
+  right: 14px;
+  padding: 5px 0;
+  width: 65px;
+  height: 20px;
+  background: var(--color-orange);
+  text-align: center;
+  font-size: 10px;
+  line-height: 10px;
+  letter-spacing: 0.1em;
+  color: var(--color-white);
+}
+
+.prices__subtitle {
+  margin-bottom: 6px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  line-height: 1.42857;
+  letter-spacing: 0.14em;
+}
+
+.prices__value {
+  text-align: center;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.prices__current-value {
+  margin-right: 22px;
+  color: var(--color-orange);
+}
+
+.prices__old-value {
+  color: var(--color-lightgray);
+  text-decoration: line-through;
+}
+
+.prices__button {
+  display: block;
+  margin: 0 auto;
+}
 /* #endregion */
 
 /* #region---advantages */
@@ -855,7 +936,7 @@ body {
 
 /* #endregion */
 
-/* #region---products&prices */
+/* #region---products */
 .products {
   margin-bottom: 85px;
 }
@@ -863,84 +944,6 @@ body {
 .products__title {
   margin-bottom: 58px;
 }
-
-.prices {
-  margin-bottom: 58px;
-  gap: var(--gap);
-  --offsets: 3;
-}
-
-.prices__item {
-  position: relative;
-  width: calc((100% - (var(--gap) * var(--offsets))) / (var(--offsets) + 1));
-}
-
-.prices__link {
-  display: block;
-	position: relative;
-  top: 0px;
-  z-index: 0;
-  overflow: hidden;
-	transition: all 0.2s ease-out;
-}
-
-.prices__link:hover {
-  box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2);
-  top: -4px;
-}
-
-.prices__img {
-  margin-bottom: 20px;
-}
-
-.prices__sale {
-  display: block;
-  position: absolute;
-  top: 11px;
-  right: 14px;
-  padding: 5px 0;
-  width: 65px;
-  height: 20px;
-  background: var(--color-orange);
-  text-align: center;
-  font-size: 10px;
-  line-height: 10px;
-  letter-spacing: 0.1em;
-  color: var(--color-white);
-}
-
-.prices__subtitle {
-  margin-bottom: 6px;
-  text-align: center;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 20px;
-  line-height: 1.42857;
-  letter-spacing: 0.14em;
-}
-
-.prices__value {
-  text-align: center;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 20px;
-}
-
-.prices__current-value {
-  margin-right: 22px;
-  color: var(--color-orange);
-}
-
-.prices__old-value {
-  color: var(--color-lightgray);
-  text-decoration: line-through;
-}
-
-.prices__button {
-  display: block;
-  margin: 0 auto;
-}
-
 /* #endregion */
 
 /* #region---rewiews */
@@ -1069,13 +1072,14 @@ body {
 .reviews__btn {
   width: 44px;
   height: 44px;
-  border: 3px solid #828181;
+  border: 3px solid var(--color-lightgray);
+  transition: var(--border-transition), var(--opacity-transition);
 }
 
 .reviews__btn-color {
-  fill: #828181;
+  fill: var(--color-lightgray);
+  transition: var(--fill-transition), var(--opacity-transition);
 }
-
 /* #endregion */
 
 /* #region---shop */
@@ -1172,6 +1176,15 @@ body {
 .splide__pagination {
   display: none;
 }
+
+.splide__arrow {
+  transition: var(--opacity-transition);
+}
+
+.splide__arrow svg {
+  fill: var(--color-black);
+  transition: var(--fill-transition);
+}
 /* #endregion */
 
 /* #region---footer*/
@@ -1243,22 +1256,26 @@ body {
   width: 70%;
   border: none;
   font-family: 'Jost', sans-serif;
-  font-size: 16px;
+  font-size: 17px;
   line-height: 26px;
   background: transparent;
 }
 
 .subscribe__form-input::placeholder {
+  font-size: 16px;
   color: var(--color-black);
+  transition: var(--color-transition);
 }
 
 .subscribe__form-btn {
+  outline: 2px solid transparent;
   font-weight: 600;
   font-size: 16px;
   line-height: 26px;
   text-align: center;
   color: var(--color-orange);
   text-transform: uppercase;
+  transition: var(--opacity-transition), var(--outline-transition);
 }
 
 .footer__links {
@@ -1273,6 +1290,13 @@ body {
   color: var(--color-black);
 }
 
+.footer__nav-link {
+  font-size: 16px;
+  line-height: 33px;
+  color: var(--color-gray);
+  transition: var(--color-transition);
+}
+
 .footer__bottom {
   justify-content: space-between;
   padding-top: 20px;
@@ -1280,14 +1304,17 @@ body {
   border-top: 1px solid rgb(157, 157, 157, 0.2);
 }
 
-.footer__nav-link {
-  font-size: 16px;
-  line-height: 33px;
-  color: var(--color-gray);
-}
-
 .footer__social-item:not(:last-child) {
   margin-right: 20px;
+}
+
+.footer__social-icon {
+  fill: var(--color-lightgray);
+  transition: var(--fill-transition);
+}
+
+.footer__social-link {
+  outline: none;
 }
 
 .footer__author {
@@ -1316,9 +1343,4 @@ body {
 	bottom: 50px;
 	transition: var(--all-transition);
 }
-
-.back-to-top:hover {
-background: rgb(214, 217, 214, .4);
-}
-
 /* #endregion */

@@ -1,8 +1,41 @@
 @media (any-hover) {
 
-  .header__text:focus-visible {
+  .btn--fill:focus-visible {
     outline: none;
+    border-color: var(--color-orange);
+    background: transparent;
+    color: var(--color-black);
+  }
+
+  .btn--fill:hover {
+    outline: none;
+    border-color: var(--color-orange);
+    background: transparent;
+    color: var(--color-black);
+  }
+
+  .btn--fill:active {
     opacity: var(--opacity-hover);
+  }
+
+  .btn--stroke:focus-visible {
+    outline: none;
+    background: var(--color-orange);
+    color: var(--color-white);
+  }
+
+  .btn--stroke:hover {
+    background: var(--color-orange);
+    color: var(--color-white);
+  }
+
+  .btn--stroke:active {
+    opacity: var(--opacity-hover);
+  }
+
+  .header__text:focus-visible {
+    outline: 2px solid var(--color-white);
+    outline-offset: 2px;
   }
 
   .header__text:hover {
@@ -14,8 +47,8 @@
   }
 
   .forms-open:focus-visible {
-    outline: none;
-    opacity: var(--opacity-hover);
+    outline: 2px solid var(--color-white);
+    outline-offset: 2px;
   }
 
   .forms-open:hover {
@@ -88,22 +121,6 @@
     border-color: var(--color-orange);
   }
 
-  .form__btn:focus-visible {
-    outline: none;
-    border: 1px solid var(--color-orange);
-    ;
-    background-color: transparent;
-    color: var(--color-orange);
-    ;
-  }
-
-  .form__btn:hover {
-    border: 1px solid var(--color-orange);
-    background-color: transparent;
-    color: var(--color-orange);
-    ;
-  }
-
   .form__link:focus-visible {
     outline: none;
     opacity: var(--opacity-hover);
@@ -134,16 +151,20 @@
   }
 
   .currency__caption:focus-visible {
-    outline: none;
-    opacity: var(--opacity-hover);
+    outline: 2px solid var(--color-white);
+    outline-offset: 2px;
   }
 
   .currency__caption:hover {
     opacity: var(--opacity-hover);
   }
 
+  .currency__caption:active {
+    opacity: 1;
+  }
+
   .currency__item:focus-visible {
-    outline: 1px solid var(--color-linen);
+    outline: 2px solid var(--color-linen);
     opacity: var(--opacity-hover);
   }
 
@@ -151,19 +172,24 @@
     opacity: var(--opacity-hover);
   }
 
-  .header__logo:focus {
-    outline: 1px solid var(--color-orange);
+  .logo:focus {
+    outline: 2px solid var(--color-orange);
+    outline-offset: 2px;
   }
 
   .nav__link:focus-visible {
     padding-bottom: 0;
-    outline: 1px solid var(--color-orange);
+    outline: 2px solid var(--color-orange);
     outline-offset: 4px;
     background: none;
   }
 
   .nav__link:hover {
     background-size: 100% 2px;
+  }
+
+  .nav__link:active {
+   opacity: var(--opacity-hover);
   }
 
   .nav__link--active {
@@ -178,6 +204,10 @@
   .nav__link--active:hover {
     cursor: auto;
     background: none;
+  }
+
+  .nav__link--active:active {
+    opacity: 1;
   }
 
   .search-form__btn:focus .search-icon {
@@ -195,6 +225,143 @@
   .search-open:hover .search-icon {
     fill: var(--color-orange);
   }
+
+  .cart:focus-visible {
+    outline: none;
+  }
+
+  .cart:active {
+    opacity: var(--opacity-hover);
+  }
+
+  .cart:focus-visible .cart-icon {
+    fill: var(--color-orange);
+  }
+
+  .cart:hover .cart-icon {
+    fill: var(--color-orange);
+  }
+
+  .prices__link:focus-visible {
+    outline: none;
+    box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2);
+    top: -4px;
+  }
+
+  .prices__link:hover {
+    box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2);
+    top: -4px;
+  }
+
+  .prices__link:active {
+    box-shadow: none;
+    top: 0;
+  }
+
+  .reviews__btn:focus-visible {
+    outline: none;
+    border-color: var(--color-orange);
+    }
+
+  .reviews__btn:hover {
+  border-color: var(--color-orange);
+  }
+
+  .reviews__btn:active {
+    opacity: var(--opacity-hover);
+  }
+
+  .reviews__btn:focus-visible .reviews__btn-color {
+    fill: var(--color-orange);
+  }
+
+  .reviews__btn:hover .reviews__btn-color {
+    fill: var(--color-orange);
+  }
+
+  .reviews__btn:active .reviews__btn-color {
+    opacity: var(--opacity-hover);
+  }
+
+  .splide__arrow:focus-visible {
+    outline: 2px solid var(--color-orange);
+    outline-offset: 2px;
+    opacity: var(--opacity-hover);
+    transition: var(--opacity-transition);
+  }
+
+  .splide.is-focus-in .splide__arrow:focus {
+    opacity: var(--opacity-hover);
+    transition: var(--opacity-transition);
+  }
+
+  .splide__arrow:hover:not(:disabled) {
+    opacity: var(--opacity-hover);
+  }
+
+  .splide__arrow:focus-visible svg {
+    fill: var(--color-orange);
+  }
+
+  .splide__arrow:hover svg {
+    fill: var(--color-orange);
+  }
+
+  .subscribe__form-input:focus {
+    outline: none;
+  }
+
+  .subscribe__form-input:focus::placeholder {
+    color: var(--color-orange);
+  }
+
+  .subscribe__form-input:hover::placeholder {
+    color: var(--color-orange);
+  }
+
+  .subscribe__form-btn:focus-visible {
+    outline: 2px solid var(--color-orange);
+    outline-offset: 3px;
+  }
+
+  .subscribe__form-btn:hover {
+    opacity: var(--opacity-hover);
+  }
+
+  .subscribe__form-btn:active {
+    opacity: 1;
+  }
+
+  .footer__nav-link:focus-visible {
+    outline: none;
+    color: var(--color-orange);
+  }
+
+  .footer__nav-link:hover {
+    color: var(--color-orange);
+  }
+
+  .footer__nav-link:active {
+    color: var(--color-lightgray);
+  }
+
+  .footer__social-link:focus-visible .footer__social-icon {
+    fill: var(--color-orange);
+  }
+
+
+  .footer__social-link:hover .footer__social-icon {
+    fill: var(--color-orange);
+  }
+
+  .footer__social-link:active .footer__social-icon {
+    fill: var(--color-lightgray);
+  }
+
+  .back-to-top:hover {
+    background: rgb(214, 217, 214, .4);
+    }
+
 }
 
 

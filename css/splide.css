@@ -160,7 +160,7 @@
 	height: 2em;
 	-ms-flex-pack: center;
 	justify-content: center;
-	opacity: .7;
+	opacity: .4;
 	padding: 0;
 	position: absolute;
 	top: 50%;
@@ -170,22 +170,12 @@
 }
 
 .splide__arrow svg {
-	fill: #000;
 	height: 1.2em;
 	width: 1.2em
 }
 
-.splide__arrow:hover:not(:disabled) {
-	opacity: .9
-}
-
 .splide__arrow:disabled {
 	opacity: .3
-}
-
-.splide__arrow:focus-visible {
-	outline: 3px solid #0bf;
-	outline-offset: 3px
 }
 
 .splide__arrow--prev {
@@ -198,11 +188,6 @@
 
 .splide__arrow--next {
 	right: 1em
-}
-
-.splide.is-focus-in .splide__arrow:focus {
-	outline: 3px solid #0bf;
-	outline-offset: 3px
 }
 
 .splide__pagination {
