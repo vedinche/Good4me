@@ -21,9 +21,14 @@ document.addEventListener("keydown", function (event) {
 });
 
 function openModal() {
-  searchModal.classList.add("open");
-  searchOpen.classList.add("hide");
-  searchModal.addEventListener("transitionend", setFocus);
+  if (
+    document.activeElement === searchOpen &&
+    !searchOpen.classList.contains("currency__caption")
+  ) {
+    searchModal.classList.add("open");
+    searchOpen.classList.add("hide");
+    searchModal.addEventListener("transitionend", setFocus);
+  }
 }
 
 function setFocus() {

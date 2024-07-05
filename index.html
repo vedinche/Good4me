@@ -19,107 +19,92 @@
       <div class="container header-top__container flex">
         <div class="header-top__left">
           <a class="header__text" href="#!">
-
             Afterpay, Laybuy &amp;&nbsp;Genoapay&nbsp;| Free Delivery Europe + USA*
           </a>
         </div>
         <div class="header-top__right flex">
           <!-- login-form start -->
-          <button class="btn-reset login__form-open">
+          <button class="forms-open btn-reset">
             Sign In / Register
           </button>
-          <div class="form-modal login-form__modal">
-            <div class="login__form-wrapper">
-              <div class="login__form-top">
-                <button class="login__form-close btn-reset">&times;</button>
+          <div class="forms">
+            <div class="forms__wrap">
+              <button class="forms__close-btn btn-reset">&times;</button>
+              <div class="forms-tab">
+                <a class="forms-tab__btn active" href="#signin-tab-content">Sign In</a>
+                <a class="forms-tab__btn" href="#register-tab-content">Register</a>
               </div>
-              <div class="login__form-container">
-                <div class="login__form-slide">
-                  <input type="radio" name="slide" id="login" checked>
-                  <input type="radio" name="slide" id="signup">
-                  <label for="login" class="slide login" tabindex="1">Sign In</label>
-                  <label for="signup" class="slide signup" tabindex="2">Register</label>
-                  <div class="slider-tab"></div>
-                </div>
-                <div class="login__form-inner">
-                  <form action="#" class="login__form login">
-                    <div class="login__form-field">
-                      <input class="login__form-input" type="text" placeholder="Email Address" required>
-                    </div>
-                    <div class="login__form-field">
-                      <input class="login__form-input" type="password" placeholder="Password" required>
-                    </div>
-                    <div class="login__form-pass"><a href="#">Forgot password?</a></div>
-                    <div class="login__form-field login__form-btn login__form-btn-login">
-                      <div class="btn-layer"></div>
-                      <input class="login__form-input" type="submit" value="Login">
-                    </div>
-                    <div class="login__form-signup">Not a member? <a href=""><span
-                          class="login__form-signup-link">Register now</span></a></div>
-                    <ul class="login__form-list list-reset">
-                      <li class="login__form-item">
-                        <a class="login__form-link" href="#!">
-                          <img class="login__form-img" src="icons/login-google.svg" alt="google">
-                        </a>
-                      </li>
-                      <li class="login__form-item">
-                        <a class="login__form-link" href="#!">
-                          <img class="login__form-img" src="icons/login-facebook.svg" alt="facebook">
-                        </a>
-                      </li>
-                      <li class="login__form-item">
-                        <a class="login__form-link" href="#!">
-                          <img class="login__form-img" src="icons/linkedin.svg" alt="linkedin">
-                        </a>
-                      </li>
-                      <li class="login__form-item">
-                        <a class="login__form-link" href="#!">
-                          <img class="login__form-img" src="icons/login-twitter.svg" alt="twitter">
-                        </a>
-                      </li>
-                    </ul>
-                  </form>
-                  <form action="#" class="login__form signup">
-                    <div class="login__form-field">
-                      <input class="login__form-input" type="text" placeholder="Email Address" required>
-                    </div>
-                    <div class="login__form-field">
-                      <input class="login__form-input" type="password" placeholder="Password" required>
-                    </div>
-                    <div class="login__form-field login__form-confirm-password">
-                      <input class="login__form-input" type="password" placeholder="Confirm password" required>
-                    </div>
-                    <label class="login__form-label" for="agree">
-                      <input class="login__form-checkbox" id="agree" type="checkbox" name="agree" checked>
-                      I&nbsp;agree to&nbsp;data processing
-                      <span class="login__form-checkbox-style"></span>
+
+              <div class="forms__content">
+                <div class="form-wrap signin-wrap active" id="signin-tab-content">
+                  <form class="form signin-form" action="" method="post">
+                    <input class="form__input signin-form__input" type="text" id="user_login" autocomplete="off"
+                      placeholder="Email or Username">
+                    <input class="form__input signin-form__input" type="password" autocomplete="off"
+                      placeholder="Password">
+                    <label class="form__label" for="remember_me">Remember me
+                      <input class="form__checkbox" type="checkbox" id="remember_me">
+                      <span class="form__checkbox-style"></span>
                     </label>
-                    <div class="login__form-field login__form-btn login__form-btn-signup">
-                      <div class="btn-layer"></div>
-                      <input type="submit" value="Signup">
-                    </div>
-                    <ul class="login__form-list list-reset">
-                      <li class="login__form-item">
-                        <a class="login__form-link" href="#!">
-                          <img class="login__form-img" src="icons/login-google.svg" alt="google">
+                    <button class="form__btn btn-sm btn--fill btn-reset" type="submit">Login</button>
+                    <ul class="form__list signin-form__list list-reset">
+                      <li class="form__item">
+                        <a class="form__link" href="#!">
+                          <img class="form__img" src="icons/login-google.svg" alt="Google">
                         </a>
                       </li>
-                      <li class="login__form-item">
-                        <a class="login__form-link" href="#!">
-                          <img class="login__form-img" src="icons/login-facebook.svg" alt="facebook">
+                      <li class="form__item">
+                        <a class="form__link" href="#!">
+                          <img class="form__img" src="icons/login-facebook.svg" alt="Facebook">
                         </a>
                       </li>
-                      <li class="login__form-item">
-                        <a class="login__form-link" href="#!">
-                          <img class="login__form-img" src="icons/linkedin.svg" alt="linkedin">
+                      <li class="form__item">
+                        <a class="form__link" href="#!">
+                          <img class="form__img" src="icons/login-linkedin.svg" alt="Linkedin">
                         </a>
                       </li>
-                      <li class="login__form-item">
-                        <a class="login__form-link" href="#!">
-                          <img class="login__form-img" src="icons/login-twitter.svg" alt="twitter">
+                      <li class="form__item">
+                        <a class="form__link" href="#!">
+                          <img class="form__img" src="icons/login-twitter.svg" alt="Twitter">
                         </a>
                       </li>
                     </ul>
+                    <a class="form__help" href="#!">Forget your password?</a>
+                  </form>
+                </div>
+                <div class="form-wrap register-wrap" id="register-tab-content">
+                  <form class="form register-form" action="" method="post">
+                    <input class="form__input register-form__input" type="email" id="user_email" autocomplete="off"
+                      placeholder="Email">
+                    <input class="form__input register-form__input" type="text" id="user_name" autocomplete="off"
+                      placeholder="Username">
+                    <input class="form__input register-form__input" type="password" autocomplete="off"
+                      placeholder="Password">
+                    <button class="form__btn btn-sm btn--fill btn-reset" type="submit">Signup</button>
+                    <ul class="form__list register-form__list list-reset">
+                      <li class="form__item">
+                        <a class="form__link" href="#!">
+                          <img class="form__img" src="icons/login-google.svg" alt="Google">
+                        </a>
+                      </li>
+                      <li class="form__item">
+                        <a class="form__link" href="#!">
+                          <img class="form__img" src="icons/login-facebook.svg" alt="Facebook">
+                        </a>
+                      </li>
+                      <li class="form__item">
+                        <a class="form__link" href="#!">
+                          <img class="form__img" src="icons/login-linkedin.svg" alt="Linkedin">
+                        </a>
+                      </li>
+                      <li class="form__item">
+                        <a class="form__link" href="#!">
+                          <img class="form__img" src="icons/login-twitter.svg" alt="Twitter">
+                        </a>
+                      </li>
+                    </ul>
+                    <p class="form__agree">By signing up, you agree to our <a class="form__agree-link"
+                        href="#!">Terms&nbsp;of&nbsp;service</a></p>
                   </form>
                 </div>
               </div>
@@ -242,9 +227,8 @@
           </span>
           <a class="cart" href="#!">
             <svg width="21" height="24" viewBox="0 0 21 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M15.2523 6.64357H14.3686V5.3685C14.3685 2.40813 11.9602 0 8.99991 0C6.03966 0 3.63119 2.40847 3.63119 5.3685V6.64357H2.74748C1.31064 6.64357 0.141602 7.81261 0.141602 9.24944V21.3941C0.141602 22.8313 1.31064 24 2.74748 24H15.2522C16.6891 24 17.8581 22.8312 17.8581 21.3941V9.24944C17.8581 7.81261 16.6891 6.64357 15.2523 6.64357ZM5.33124 5.3685C5.33124 3.34569 6.97688 1.70005 8.99991 1.70005C11.0227 1.70005 12.6684 3.34569 12.6684 5.3685V6.64357H5.33124V5.3685ZM16.1582 21.3941C16.1582 21.894 15.7516 22.2999 15.2523 22.2999H2.74737C2.24787 22.2999 1.84154 21.8936 1.84154 21.3941V9.24944C1.84154 8.74994 2.24787 8.34361 2.74737 8.34361H3.63108V9.53567C3.35792 9.77363 3.18174 10.1202 3.18174 10.5112C3.18174 11.2289 3.76346 11.8109 4.48116 11.8109C5.19862 11.8109 5.78058 11.2289 5.78058 10.5112C5.78058 10.1205 5.60428 9.77397 5.33124 9.53567V8.34361H12.6684V9.53567C12.3952 9.77363 12.219 10.1202 12.219 10.5112C12.219 11.2289 12.8007 11.8109 13.5184 11.8109C14.2361 11.8109 14.8179 11.2289 14.8179 10.5112C14.8179 10.1205 14.6416 9.77363 14.3685 9.53567V8.34361H15.2522C15.7517 8.34361 16.1581 8.74994 16.1581 9.24944V21.3941H16.1582Z"
-                fill="#454545" />
+              <path class="cart-icon"
+                d="M15.2523 6.64357H14.3686V5.3685C14.3685 2.40813 11.9602 0 8.99991 0C6.03966 0 3.63119 2.40847 3.63119 5.3685V6.64357H2.74748C1.31064 6.64357 0.141602 7.81261 0.141602 9.24944V21.3941C0.141602 22.8313 1.31064 24 2.74748 24H15.2522C16.6891 24 17.8581 22.8312 17.8581 21.3941V9.24944C17.8581 7.81261 16.6891 6.64357 15.2523 6.64357ZM5.33124 5.3685C5.33124 3.34569 6.97688 1.70005 8.99991 1.70005C11.0227 1.70005 12.6684 3.34569 12.6684 5.3685V6.64357H5.33124V5.3685ZM16.1582 21.3941C16.1582 21.894 15.7516 22.2999 15.2523 22.2999H2.74737C2.24787 22.2999 1.84154 21.8936 1.84154 21.3941V9.24944C1.84154 8.74994 2.24787 8.34361 2.74737 8.34361H3.63108V9.53567C3.35792 9.77363 3.18174 10.1202 3.18174 10.5112C3.18174 11.2289 3.76346 11.8109 4.48116 11.8109C5.19862 11.8109 5.78058 11.2289 5.78058 10.5112C5.78058 10.1205 5.60428 9.77397 5.33124 9.53567V8.34361H12.6684V9.53567C12.3952 9.77363 12.219 10.1202 12.219 10.5112C12.219 11.2289 12.8007 11.8109 13.5184 11.8109C14.2361 11.8109 14.8179 11.2289 14.8179 10.5112C14.8179 10.1205 14.6416 9.77363 14.3685 9.53567V8.34361H15.2522C15.7517 8.34361 16.1581 8.74994 16.1581 9.24944V21.3941H16.1582Z" />
               <path
                 d="M16.25 8.5C16.25 8.90667 16.29 9.28333 16.37 9.63C16.45 9.97 16.5667 10.2667 16.72 10.52C16.8733 10.7667 17.0567 10.96 17.27 11.1C17.49 11.2333 17.7333 11.3 18 11.3C18.2733 11.3 18.5167 11.2333 18.73 11.1C18.9433 10.96 19.1267 10.7667 19.28 10.52C19.4333 10.2667 19.55 9.97 19.63 9.63C19.71 9.28333 19.75 8.90667 19.75 8.5C19.75 8.09333 19.71 7.72 19.63 7.38C19.55 7.03333 19.4333 6.73667 19.28 6.49C19.1267 6.23667 18.9433 6.04333 18.73 5.91C18.5167 5.77 18.2733 5.7 18 5.7C17.7333 5.7 17.49 5.77 17.27 5.91C17.0567 6.04333 16.8733 6.23667 16.72 6.49C16.5667 6.73667 16.45 7.03333 16.37 7.38C16.29 7.72 16.25 8.09333 16.25 8.5ZM15.4 8.5C15.4 7.8 15.51 7.18 15.73 6.64C15.95 6.1 16.2533 5.67667 16.64 5.37C17.0333 5.05667 17.4867 4.9 18 4.9C18.5133 4.9 18.9633 5.05667 19.35 5.37C19.7433 5.67667 20.05 6.1 20.27 6.64C20.49 7.18 20.6 7.8 20.6 8.5C20.6 9.2 20.49 9.82 20.27 10.36C20.05 10.9 19.7433 11.3267 19.35 11.64C18.9633 11.9467 18.5133 12.1 18 12.1C17.4867 12.1 17.0333 11.9467 16.64 11.64C16.2533 11.3267 15.95 10.9 15.73 10.36C15.51 9.82 15.4 9.2 15.4 8.5Z"
                 fill="white" />

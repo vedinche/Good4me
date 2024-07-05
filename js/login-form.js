@@ -1,43 +1,52 @@
-//for form
-let loginText = document.querySelector(".login__form-top .login");
-let loginForm = document.querySelector("form.login");
-let loginBtn = document.querySelector("label.login");
-let signupBtn = document.querySelector("label.signup");
-let signupLink = document.querySelector(".login__form-signup-link");
+let tabLinks = document.querySelectorAll(".forms-tab__btn");
+let tabContents = document.querySelectorAll('div[id$="tab-content"]');
 
-signupBtn.onclick = () => {
-  loginForm.style.marginLeft = "-50%";
-  loginText.style.marginLeft = "-50%";
-};
-loginBtn.onclick = () => {
-  loginForm.style.marginLeft = "0%";
-  loginText.style.marginLeft = "0%";
-};
-signupLink.onclick = () => {
-  signupBtn.click();
-  return false;
-};
+tabLinks.forEach(function (link) {
+  link.addEventListener("click", function (event) {
+    event.preventDefault();
+    tabLinks.forEach(function (tabLink) {
+      tabLink.classList.remove("active");
+    });
+    this.classList.add("active");
 
-//for form modal
-let openButton = document.querySelector(".login__form-open");
-let closeButton = document.querySelectorAll(".login__form-close");
-let formModal = document.querySelector(".form-modal");
-
-// Add a 'click' event for the open buttons
-openButton.addEventListener("click", function () {
-  formModal.classList.add("open");
+    let tabContentId = this.getAttribute("href");
+    tabContents.forEach(function (content) {
+      content.classList.remove("active");
+    });
+    let tabContent = document.querySelector(tabContentId);
+    tabContent.classList.add("active");
+    setTimeout(function () {
+      tabContents.forEach(function (content) {
+        content.style.display = "none";
+      });
+      tabContent.style.display = "block";
+    }, 20);
+  });
 });
 
-// Add a 'click' event for the close buttons
-for (let i = 0; i < closeButton.length; i++) {
-  closeButton[i].addEventListener("click", function () {
-    formModal.classList.remove("open");
-  });
-}
+//modal
+let formsOpen = document.querySelector(".forms-open");
+let formsClose = document.querySelectorAll(".forms__close-btn");
+let formsModal = document.querySelector(".forms");
 
-//Close the modal window when clicking outside it
-window.addEventListener("click", function (event) {
-  if (event.target === formModal) {
-    formModal.classList.remove("open");
+formsOpen.addEventListener("click", () => {
+  formsModal.classList.add("open");
+});
+
+formsClose.forEach((button) => {
+  button.addEventListener("click", () => {
+    formsModal.classList.remove("open");
+  });
+});
+
+window.addEventListener("click", (event) => {
+  if (event.target === formsModal) {
+    formsModal.classList.remove("open");
+  }
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && formsModal.classList.contains("open")) {
+    formsModal.classList.remove("open");
   }
 });

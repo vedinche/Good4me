@@ -1,18 +1,23 @@
 // Добавляем обработчик события для клика по заголовку выпадающего меню
 document.addEventListener("DOMContentLoaded", function () {
-  var currency__dropdown = document.querySelector(".currency__dropdown");
-  var currency__caption = document.querySelector(".currency__caption");
+  let currency__dropdown = document.querySelector(".currency__dropdown");
+  let currency__caption = document.querySelector(".currency__caption");
 
   function togglecurrency__dropdown() {
     currency__dropdown.classList.toggle("open");
   }
 
   function handleKeyPress(event) {
-    if (event.key === "Enter") {
-      togglecurrency__dropdown();
+    if (event.key === "Enter" && !searchModal.classList.contains("open")) {
+      if (
+        !event.target.closest(".login__form-top .login") &&
+        !event.target.closest("label.login") &&
+        !event.target.closest("label.signup")
+      ) {
+        togglecurrency__dropdown();
+      }
     }
   }
-
   currency__caption.addEventListener("click", togglecurrency__dropdown);
   document.addEventListener("keypress", handleKeyPress);
 });
