@@ -189,7 +189,7 @@
   }
 
   .nav__link:active {
-   opacity: var(--opacity-hover);
+    opacity: var(--opacity-hover);
   }
 
   .nav__link--active {
@@ -261,10 +261,10 @@
   .reviews__btn:focus-visible {
     outline: none;
     border-color: var(--color-orange);
-    }
+  }
 
   .reviews__btn:hover {
-  border-color: var(--color-orange);
+    border-color: var(--color-orange);
   }
 
   .reviews__btn:active {
@@ -360,12 +360,117 @@
 
   .back-to-top:hover {
     background: rgb(214, 217, 214, .4);
-    }
+  }
 
 }
 
+@media (max-width: 1420px) {
 
-@media (max-width: 1279px) {}
+  :root {
+--gap: 20px;
+  }
+
+  .container {
+    padding: 0 40px;
+  }
+
+  .section-wrap {
+    padding: 0 40px;
+  }
+
+  .header__logo {
+    margin-right: 0;
+    order: 1;
+  }
+
+  .nav {
+    margin-right: 0;
+    order: 3;
+    width: 100%;
+  }
+
+  .nav__list {
+    justify-content: center;
+  }
+
+  .header-bottom__right {
+    order: 2;
+  }
+
+  .hero {
+    background-image: url(../img/Slider-mob.webp);
+  }
+
+  .hero__content {
+    width: 40%;
+  }
+
+  .hero__subtitle {
+    font-size: 38px;
+  }
+
+  .control__container {
+    justify-content: space-between;
+  }
+
+  .control__contant {
+    padding-right: 20px;
+    padding-left: 0;
+    margin-right: 0;
+  }
+
+  .control__title {
+    font-size: 26px;
+    line-height: 34px;
+  }
+
+  .control__small-img {
+    height: calc(50% - (var(--gap) / 2));
+  }
+
+  .reviews {
+    margin-bottom: 72px;
+    height: 700px;
+  }
+
+  .reviews__title {
+    padding-top: 160px;
+  }
+
+  .reviews__text {
+    margin-bottom: 24px;
+    max-width: 470px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 32px;
+    letter-spacing: 0.04em;
+    color: var(--color-gray);
+  }
+
+  .reviews__img {
+    bottom: -5px;
+    right: 87px;
+    width: 400px;
+    height: 400px;
+  }
+
+  .footer__top {
+    justify-content: space-between;
+  }
+
+  .footer__contant {
+    margin-right: 0;
+  }
+
+  .subscribe__form {
+    width: 100%;
+  }
+
+  .footer__links {
+    margin-left: 0;
+  }
+
+}
 
 @media (max-width: 1023px) {}
 
