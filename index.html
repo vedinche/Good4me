@@ -1,912 +1,1307 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GOOD4ME</title>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/splide.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/media.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GOOD4ME</title>
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/splide.css">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/media.css">
-</head>
+  <body>
+    <header class="header">
+      <div class="header-top">
+        <div class="container header-top__container flex">
+          <div class="header-top__left">
+            <a class="header__text" href="#!">
+              Afterpay, Laybuy &amp;&nbsp;Genoapay&nbsp;| Free Delivery Europe +
+              USA*
+            </a>
+          </div>
+          <div class="header-top__right flex">
+            <!-- login-form start -->
+            <button class="forms-open btn-reset">Sign In / Register</button>
+            <div class="forms">
+              <div class="forms__wrap">
+                <button class="forms__close-btn btn-reset">&times;</button>
+                <div class="forms-tab">
+                  <a
+                    class="forms-tab__btn active"
+                    href="#signin-tab-content"
+                    aria-label="Sign In"
+                    >Sign In</a
+                  >
+                  <a
+                    class="forms-tab__btn"
+                    href="#register-tab-content"
+                    aria-label="Register"
+                    >Register</a
+                  >
+                </div>
 
-<body>
-
-  <header class="header">
-    <div class="header-top">
-      <div class="container header-top__container flex">
-        <div class="header-top__left">
-          <a class="header__text" href="#!">
-            Afterpay, Laybuy &amp;&nbsp;Genoapay&nbsp;| Free Delivery Europe + USA*
+                <div class="forms__content">
+                  <div
+                    class="form-wrap signin-wrap active"
+                    id="signin-tab-content"
+                  >
+                    <form class="form signin-form" action="#!" method="post">
+                      <input
+                        class="form__input signin-form__input"
+                        type="text"
+                        id="user_login"
+                        autocomplete="off"
+                        placeholder="Email or Username"
+                      />
+                      <input
+                        class="form__input signin-form__input"
+                        type="password"
+                        autocomplete="off"
+                        placeholder="Password"
+                      />
+                      <label class="form__label" for="remember_me"
+                        >Remember me
+                        <input
+                          class="form__checkbox"
+                          type="checkbox"
+                          id="remember_me"
+                          aria-label="Remember me button"
+                        />
+                        <span class="form__checkbox-style"></span>
+                      </label>
+                      <button
+                        class="form__btn btn-sm btn--fill btn-reset"
+                        type="submit"
+                      >
+                        Login
+                      </button>
+                      <ul class="form__list signin-form__list list-reset">
+                        <li class="form__item">
+                          <a
+                            class="form__link"
+                            href="#!"
+                            aria-label="login with google"
+                          >
+                            <img
+                              class="form__img"
+                              src="icons/login-google.svg"
+                              alt="Google"
+                            />
+                          </a>
+                        </li>
+                        <li class="form__item">
+                          <a
+                            class="form__link"
+                            href="#!"
+                            aria-label="login with facebook"
+                          >
+                            <img
+                              class="form__img"
+                              src="icons/login-facebook.svg"
+                              alt="Facebook"
+                            />
+                          </a>
+                        </li>
+                        <li class="form__item">
+                          <a
+                            class="form__link"
+                            href="#!"
+                            aria-label="login with linkedin"
+                          >
+                            <img
+                              class="form__img"
+                              src="icons/login-linkedin.svg"
+                              alt="Linkedin"
+                            />
+                          </a>
+                        </li>
+                        <li class="form__item">
+                          <a
+                            class="form__link"
+                            href="#!"
+                            aria-label="login with twitter"
+                          >
+                            <img
+                              class="form__img"
+                              src="icons/login-twitter.svg"
+                              alt="Twitter"
+                            />
+                          </a>
+                        </li>
+                      </ul>
+                      <a class="form__help" href="#!">Forget your password?</a>
+                    </form>
+                  </div>
+                  <div
+                    class="form-wrap register-wrap"
+                    id="register-tab-content"
+                  >
+                    <form class="form register-form" action="#!" method="post">
+                      <input
+                        class="form__input register-form__input"
+                        type="email"
+                        id="user_email"
+                        autocomplete="off"
+                        placeholder="Email"
+                      />
+                      <input
+                        class="form__input register-form__input"
+                        type="text"
+                        id="user_name"
+                        autocomplete="off"
+                        placeholder="Username"
+                      />
+                      <input
+                        class="form__input register-form__input"
+                        type="password"
+                        autocomplete="off"
+                        placeholder="Password"
+                      />
+                      <button
+                        class="form__btn btn-sm btn--fill btn-reset"
+                        type="submit"
+                      >
+                        Signup
+                      </button>
+                      <ul class="form__list register-form__list list-reset">
+                        <li class="form__item">
+                          <a
+                            class="form__link"
+                            href="#!"
+                            aria-label="register with google"
+                          >
+                            <img
+                              class="form__img"
+                              src="icons/login-google.svg"
+                              alt="Google"
+                            />
+                          </a>
+                        </li>
+                        <li class="form__item">
+                          <a
+                            class="form__link"
+                            href="#!"
+                            aria-label="register with facebook"
+                          >
+                            <img
+                              class="form__img"
+                              src="icons/login-facebook.svg"
+                              alt="Facebook"
+                            />
+                          </a>
+                        </li>
+                        <li class="form__item">
+                          <a
+                            class="form__link"
+                            href="#!"
+                            aria-label="register with linkedin"
+                          >
+                            <img
+                              class="form__img"
+                              src="icons/login-linkedin.svg"
+                              alt="Linkedin"
+                            />
+                          </a>
+                        </li>
+                        <li class="form__item">
+                          <a
+                            class="form__link"
+                            href="#!"
+                            aria-label="register with twitter"
+                          >
+                            <img
+                              class="form__img"
+                              src="icons/login-twitter.svg"
+                              alt="Twitter"
+                            />
+                          </a>
+                        </li>
+                      </ul>
+                      <p class="form__agree">
+                        By signing up, you agree to our
+                        <a class="form__agree-link" href="#!"
+                          >Terms&nbsp;of&nbsp;service</a
+                        >
+                      </p>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- login-form end -->
+            <div class="header__top-separator"></div>
+            <div class="currency">
+              <div class="currency__dropdown">
+                <div
+                  class="currency__caption"
+                  tabindex="0"
+                  aria-label="Select currency"
+                >
+                  <img
+                    class="currency__caption-img currency__img"
+                    src="icons/usd.png"
+                    alt="United States dollar"
+                  />
+                  <span class="currency__caption-value currency__value"
+                    >USD</span
+                  >
+                </div>
+                <div class="currency__list">
+                  <div
+                    class="currency__item selected flex"
+                    data-currency__item="USD"
+                    tabindex="0"
+                  >
+                    <img
+                      class="currency__img"
+                      src="icons/usd.png"
+                      alt="United States dollar"
+                    />
+                    <span class="currency__value">USD</span>
+                  </div>
+                  <div
+                    class="currency__item flex"
+                    data-currency__item="EUR"
+                    tabindex="0"
+                  >
+                    <img class="currency__img" src="icons/eur.png" alt="Euro" />
+                    <span class="currency__value">EUR</span>
+                  </div>
+                  <div
+                    class="currency__item flex"
+                    data-currency__item="GBP"
+                    tabindex="0"
+                  >
+                    <img
+                      class="currency__img"
+                      src="icons/gbp.png"
+                      alt="Great Britain Pound"
+                    />
+                    <span class="currency__value">GBP</span>
+                  </div>
+                  <div
+                    class="currency__item flex"
+                    data-currency__item="PLN"
+                    tabindex="0"
+                  >
+                    <img
+                      class="currency__img"
+                      src="icons/pln.png"
+                      alt="PoLish New zloty"
+                    />
+                    <span class="currency__value">PLN</span>
+                  </div>
+                  <div
+                    class="currency__item flex"
+                    data-currency__item="CAD"
+                    tabindex="0"
+                  >
+                    <img
+                      class="currency__img"
+                      src="icons/cad.png"
+                      alt="Canadian dollar"
+                    />
+                    <span class="currency__value">CAD</span>
+                  </div>
+                  <div
+                    class="currency__item flex"
+                    data-currency__item="JPY"
+                    tabindex="0"
+                  >
+                    <img
+                      class="currency__img"
+                      src="icons/jpy.png"
+                      alt="Japanese yen"
+                    />
+                    <span class="currency__value">JPY</span>
+                  </div>
+                  <div
+                    class="currency__item flex"
+                    data-currency__item="CNY"
+                    tabindex="0"
+                  >
+                    <img
+                      class="currency__img"
+                      src="icons/cny.png"
+                      alt="Chinese yuan"
+                    />
+                    <span class="currency__value">CNY</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header-bottom">
+        <div class="container header-bottom__container flex">
+          <a class="logo header__logo" href="#!" aria-label="logotype">
+            <img class="header__logo-img" src="icons/logo.png" alt="Logotype" />
           </a>
-        </div>
-        <div class="header-top__right flex">
-          <!-- login-form start -->
-          <button class="forms-open btn-reset">
-            Sign In / Register
-          </button>
-          <div class="forms">
-            <div class="forms__wrap">
-              <button class="forms__close-btn btn-reset">&times;</button>
-              <div class="forms-tab">
-                <a class="forms-tab__btn active" href="#signin-tab-content" aria-label="Sign In">Sign In</a>
-                <a class="forms-tab__btn" href="#register-tab-content" aria-label="Register">Register</a>
-              </div>
-
-              <div class="forms__content">
-                <div class="form-wrap signin-wrap active" id="signin-tab-content">
-                  <form class="form signin-form" action="#!" method="post">
-                    <input class="form__input signin-form__input" type="text" id="user_login" autocomplete="off"
-                      placeholder="Email or Username">
-                    <input class="form__input signin-form__input" type="password" autocomplete="off"
-                      placeholder="Password">
-                    <label class="form__label" for="remember_me">Remember me
-                      <input class="form__checkbox" type="checkbox" id="remember_me" aria-label="Remember me button">
-                      <span class="form__checkbox-style"></span>
-                    </label>
-                    <button class="form__btn btn-sm btn--fill btn-reset" type="submit">Login</button>
-                    <ul class="form__list signin-form__list list-reset">
-                      <li class="form__item">
-                        <a class="form__link" href="#!" aria-label="login with google">
-                          <img class="form__img" src="icons/login-google.svg" alt="Google">
-                        </a>
-                      </li>
-                      <li class="form__item">
-                        <a class="form__link" href="#!" aria-label="login with facebook">
-                          <img class="form__img" src="icons/login-facebook.svg" alt="Facebook">
-                        </a>
-                      </li>
-                      <li class="form__item">
-                        <a class="form__link" href="#!" aria-label="login with linkedin">
-                          <img class="form__img" src="icons/login-linkedin.svg" alt="Linkedin">
-                        </a>
-                      </li>
-                      <li class="form__item">
-                        <a class="form__link" href="#!" aria-label="login with twitter">
-                          <img class="form__img" src="icons/login-twitter.svg" alt="Twitter">
-                        </a>
-                      </li>
-                    </ul>
-                    <a class="form__help" href="#!">Forget your password?</a>
-                  </form>
-                </div>
-                <div class="form-wrap register-wrap" id="register-tab-content">
-                  <form class="form register-form" action="#!" method="post">
-                    <input class="form__input register-form__input" type="email" id="user_email" autocomplete="off"
-                      placeholder="Email">
-                    <input class="form__input register-form__input" type="text" id="user_name" autocomplete="off"
-                      placeholder="Username">
-                    <input class="form__input register-form__input" type="password" autocomplete="off"
-                      placeholder="Password">
-                    <button class="form__btn btn-sm btn--fill btn-reset" type="submit">Signup</button>
-                    <ul class="form__list register-form__list list-reset">
-                      <li class="form__item">
-                        <a class="form__link" href="#!" aria-label="register with google">
-                          <img class="form__img" src="icons/login-google.svg" alt="Google">
-                        </a>
-                      </li>
-                      <li class="form__item">
-                        <a class="form__link" href="#!" aria-label="register with facebook">
-                          <img class="form__img" src="icons/login-facebook.svg" alt="Facebook">
-                        </a>
-                      </li>
-                      <li class="form__item">
-                        <a class="form__link" href="#!" aria-label="register with linkedin">
-                          <img class="form__img" src="icons/login-linkedin.svg" alt="Linkedin">
-                        </a>
-                      </li>
-                      <li class="form__item">
-                        <a class="form__link" href="#!" aria-label="register with twitter">
-                          <img class="form__img" src="icons/login-twitter.svg" alt="Twitter">
-                        </a>
-                      </li>
-                    </ul>
-                    <p class="form__agree">By signing up, you agree to our <a class="form__agree-link"
-                        href="#!">Terms&nbsp;of&nbsp;service</a></p>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- login-form end -->
-          <div class="header__top-separator"></div>
-          <div class="currency">
-            <div class="currency__dropdown">
-              <div class="currency__caption" tabindex="0" aria-label="Select currency">
-                <img class="currency__caption-img currency__img" src="icons/usd.png" alt="United States dollar">
-                <span class="currency__caption-value currency__value">USD</span>
-              </div>
-              <div class="currency__list">
-                <div class="currency__item selected flex" data-currency__item="USD" tabindex="0">
-                  <img class="currency__img" src="icons/usd.png" alt="United States dollar">
-                  <span class="currency__value">USD</span>
-                </div>
-                <div class="currency__item flex" data-currency__item="EUR" tabindex="0">
-                  <img class="currency__img" src="icons/eur.png" alt="Euro">
-                  <span class="currency__value">EUR</span>
-                </div>
-                <div class="currency__item flex" data-currency__item="GBP" tabindex="0">
-                  <img class="currency__img" src="icons/gbp.png" alt="Great Britain Pound">
-                  <span class="currency__value">GBP</span>
-                </div>
-                <div class="currency__item flex" data-currency__item="PLN" tabindex="0">
-                  <img class="currency__img" src="icons/pln.png" alt="PoLish New zloty">
-                  <span class="currency__value">PLN</span>
-                </div>
-                <div class="currency__item flex" data-currency__item="CAD" tabindex="0">
-                  <img class="currency__img" src="icons/cad.png" alt="Canadian dollar">
-                  <span class="currency__value">CAD</span>
-                </div>
-                <div class="currency__item flex" data-currency__item="JPY" tabindex="0">
-                  <img class="currency__img" src="icons/jpy.png" alt="Japanese yen">
-                  <span class="currency__value">JPY</span>
-                </div>
-                <div class="currency__item flex" data-currency__item="CNY" tabindex="0">
-                  <img class="currency__img" src="icons/cny.png" alt="Chinese yuan">
-                  <span class="currency__value">CNY</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="header-bottom">
-      <div class="container header-bottom__container flex">
-        <a class="logo header__logo" href="#!" aria-label="logotype">
-          <img class="header__logo-img" src="icons/logo.png" alt="Logotype">
-        </a>
-        <nav class="nav">
-          <ul class="nav__list list-reset flex">
-            <li class="nav__item">
-              <a class="nav__link nav__link--active" href="#!">
-                HOME
-              </a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__link" href="#!">
-                SHOP
-              </a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__link" href="#!">
-                FAQ'S
-              </a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__link" href="#!">
-                STOCKISTS
-              </a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__link" href="#!">
-                WHOLESALE
-              </a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__link" href="#!">
-                CONTACT
-              </a>
-            </li>
-          </ul>
-        </nav>
-        <div class="header-bottom__right flex">
-          <div class="search-modal flex">
-            <div class="search-wrapper flex">
-              <form class="search-form" action="#!">
-                <input class="search-form__input" type="text" placeholder="Search">
-                <button class="search-form__btn" type="submit" aria-label="search button"> <svg width="18" height="18"
-                    viewbox="0 0 22 22" fill="none">
-                    <g>
-                      <path class="search-icon"
-                        d="M21.7312 20.4352L15.475 14.179C16.6868 12.6821 17.4165 10.78 17.4165 8.70842C17.4165 3.90696 13.5097 0.000152588 8.70822 0.000152588C3.90677 0.000152588 0 3.90692 0 8.70837C0 13.5098 3.90681 17.4166 8.70826 17.4166C10.7799 17.4166 12.682 16.687 14.1789 15.4752L20.4351 21.7313C20.6138 21.9101 20.8484 21.9999 21.0831 21.9999C21.3178 21.9999 21.5525 21.9101 21.7312 21.7313C22.0896 21.3729 22.0896 20.7936 21.7312 20.4352ZM8.70826 15.5833C4.91695 15.5833 1.83333 12.4997 1.83333 8.70837C1.83333 4.91706 4.91695 1.83344 8.70826 1.83344C12.4996 1.83344 15.5832 4.91706 15.5832 8.70837C15.5832 12.4997 12.4995 15.5833 8.70826 15.5833Z" />
-                    </g>
-                    <defs>
-                      <clippath id="clip0_9160_172">
-                        <rect width="22" height="22" fill="white" />
-                      </clippath>
-                    </defs>
-                  </svg></button>
-              </form>
-            </div>
-          </div>
-          <span class="search-open" tabindex="0" aria-label="open search form">
-            <svg width="22" height="22" viewbox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <g>
-                <path class="search-icon"
-                  d="M21.7312 20.4352L15.475 14.179C16.6868 12.6821 17.4165 10.78 17.4165 8.70842C17.4165 3.90696 13.5097 0.000152588 8.70822 0.000152588C3.90677 0.000152588 0 3.90692 0 8.70837C0 13.5098 3.90681 17.4166 8.70826 17.4166C10.7799 17.4166 12.682 16.687 14.1789 15.4752L20.4351 21.7313C20.6138 21.9101 20.8484 21.9999 21.0831 21.9999C21.3178 21.9999 21.5525 21.9101 21.7312 21.7313C22.0896 21.3729 22.0896 20.7936 21.7312 20.4352ZM8.70826 15.5833C4.91695 15.5833 1.83333 12.4997 1.83333 8.70837C1.83333 4.91706 4.91695 1.83344 8.70826 1.83344C12.4996 1.83344 15.5832 4.91706 15.5832 8.70837C15.5832 12.4997 12.4995 15.5833 8.70826 15.5833Z" />
-              </g>
-              <defs>
-                <clippath id="cli0_9160_172">
-                  <rect width="22" height="22" fill="white" />
-                </clippath>
-              </defs>
-            </svg>
-          </span>
-          <a class="cart" href="#!" aria-label="Cart">
-            <svg width="21" height="24" viewbox="0 0 21 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path class="cart-icon"
-                d="M15.2523 6.64357H14.3686V5.3685C14.3685 2.40813 11.9602 0 8.99991 0C6.03966 0 3.63119 2.40847 3.63119 5.3685V6.64357H2.74748C1.31064 6.64357 0.141602 7.81261 0.141602 9.24944V21.3941C0.141602 22.8313 1.31064 24 2.74748 24H15.2522C16.6891 24 17.8581 22.8312 17.8581 21.3941V9.24944C17.8581 7.81261 16.6891 6.64357 15.2523 6.64357ZM5.33124 5.3685C5.33124 3.34569 6.97688 1.70005 8.99991 1.70005C11.0227 1.70005 12.6684 3.34569 12.6684 5.3685V6.64357H5.33124V5.3685ZM16.1582 21.3941C16.1582 21.894 15.7516 22.2999 15.2523 22.2999H2.74737C2.24787 22.2999 1.84154 21.8936 1.84154 21.3941V9.24944C1.84154 8.74994 2.24787 8.34361 2.74737 8.34361H3.63108V9.53567C3.35792 9.77363 3.18174 10.1202 3.18174 10.5112C3.18174 11.2289 3.76346 11.8109 4.48116 11.8109C5.19862 11.8109 5.78058 11.2289 5.78058 10.5112C5.78058 10.1205 5.60428 9.77397 5.33124 9.53567V8.34361H12.6684V9.53567C12.3952 9.77363 12.219 10.1202 12.219 10.5112C12.219 11.2289 12.8007 11.8109 13.5184 11.8109C14.2361 11.8109 14.8179 11.2289 14.8179 10.5112C14.8179 10.1205 14.6416 9.77363 14.3685 9.53567V8.34361H15.2522C15.7517 8.34361 16.1581 8.74994 16.1581 9.24944V21.3941H16.1582Z" />
-              <path
-                d="M16.25 8.5C16.25 8.90667 16.29 9.28333 16.37 9.63C16.45 9.97 16.5667 10.2667 16.72 10.52C16.8733 10.7667 17.0567 10.96 17.27 11.1C17.49 11.2333 17.7333 11.3 18 11.3C18.2733 11.3 18.5167 11.2333 18.73 11.1C18.9433 10.96 19.1267 10.7667 19.28 10.52C19.4333 10.2667 19.55 9.97 19.63 9.63C19.71 9.28333 19.75 8.90667 19.75 8.5C19.75 8.09333 19.71 7.72 19.63 7.38C19.55 7.03333 19.4333 6.73667 19.28 6.49C19.1267 6.23667 18.9433 6.04333 18.73 5.91C18.5167 5.77 18.2733 5.7 18 5.7C17.7333 5.7 17.49 5.77 17.27 5.91C17.0567 6.04333 16.8733 6.23667 16.72 6.49C16.5667 6.73667 16.45 7.03333 16.37 7.38C16.29 7.72 16.25 8.09333 16.25 8.5ZM15.4 8.5C15.4 7.8 15.51 7.18 15.73 6.64C15.95 6.1 16.2533 5.67667 16.64 5.37C17.0333 5.05667 17.4867 4.9 18 4.9C18.5133 4.9 18.9633 5.05667 19.35 5.37C19.7433 5.67667 20.05 6.1 20.27 6.64C20.49 7.18 20.6 7.8 20.6 8.5C20.6 9.2 20.49 9.82 20.27 10.36C20.05 10.9 19.7433 11.3267 19.35 11.64C18.9633 11.9467 18.5133 12.1 18 12.1C17.4867 12.1 17.0333 11.9467 16.64 11.64C16.2533 11.3267 15.95 10.9 15.73 10.36C15.51 9.82 15.4 9.2 15.4 8.5Z"
-                fill="white" />
-            </svg>
-            <span class="cart__count flex">0</span>
-          </a>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <main class="main">
-    <section class="hero">
-      <div class="section-wrap hero__wrap flex">
-        <div class="hero__content">
-          <h1 class="hero__title">
-            Good4Me
-          </h1>
-          <h2 class="hero__subtitle subtitle-bg">
-            Apple Cider Vinegar
-          </h2>
-          <p class="hero__descr">
-            Good4Me Apple Cider Vinegar gummies are the newest addition to&nbsp;your morning health and well-being
-            regime.
-          </p>
-          <button class="hero__btn btn-sm btn-reset btn--fill">
-            Shop Now
-          </button>
-        </div>
-      </div>
-    </section>
-
-    <section class="deal">
-      <div class="container">
-        <h2 class="deal__title section-title">
-          GOOD4ME DEAL
-        </h2>
-        <p class="deal__descr">
-          Pick your beauty products today.&nbsp;50% OFF on&nbsp;the most popular GOOD4ME. Order all classy products
-          today!
-        </p>
-        <ul class="prices deal__prices list-reset flex">
-          <li class="prices__item">
-            <a href="#!" class="prices__link">
-              <img class="prices__img deal__img" src="img/multi.webp" alt="MULTI-VITAMIN: EVERYDAY WELLNESS">
-              <h3 class="deal__subtitle">
-                MULTI-VITAMIN: EVERYDAY WELLNESS
-              </h3>
-            </a>
-          </li>
-          <li class="prices__item">
-            <a href="#!" class="prices__link">
-              <img class="prices__img deal__img" src="img/full.webp" alt="FULL RANGE VALUE PACK (SAVE 33%)">
-              <h3 class="deal__subtitle">
-                FULL&nbsp;RANGE VALUE PACK (SAVE&nbsp;33%)
-              </h3>
-            </a>
-          </li>
-          <li class="prices__item">
-            <a href="#!" class="prices__link">
-              <img class="prices__img deal__img" src="img/immunity.webp" alt="VITAMIN C: IMMUNITY SUPPORT">
-              <h3 class="deal__subtitle">
-                VITAMIN C: IMMUNITY SUPPORT
-              </h3>
-            </a>
-          </li>
-          <li class="prices__item">
-            <a href="#!" class="prices__link">
-              <img class="prices__img deal__img" src="img/energy.webp" alt="IRON: ENERGY SUPPORT">
-              <h3 class="deal__subtitle">
-                IRON: ENERGY SUPPORT
-              </h3>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="advantages">
-      <div class="section-wrap advantages__wrap">
-        <h2 class="visually-hidden">
-          Advantages
-        </h2>
-        <ul class="advantages__list list-reset flex">
-          <li class="advantages__item advantages__item-1">
-            <h3 class="advantages__title">
-              WORLDWIDE SHIPPING
-            </h3>
-            <p class="advantages__descr">
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-            </p>
-          </li>
-          <li class="advantages__item advantages__item-2">
-            <h3 class="advantages__title">
-              30 DAYS GUARANTEE
-            </h3>
-            <p class="advantages__descr">
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-            </p>
-          </li>
-          <li class="advantages__item advantages__item-3">
-            <h3 class="advantages__title">
-              SECURED PAYMENTS
-            </h3>
-            <p class="advantages__descr">
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-            </p>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="control">
-      <div class="container control__container flex">
-        <div class="control__contant">
-          <h2 class="control__title">
-            TAKE CONTROL OF YOUR HEALTH
-          </h2>
-          <p class="control__descr">
-            The Good4Me range has been formulated based on scientific &amp; traditional evidence.
-          </p>
-          <p class="control__descr">
-            Our vitamins are here and ready to&nbsp;boost your mood, immunity and overall well-being!
-          </p>
-          <p class="control__descr">
-            Made in&nbsp;New Zealand from local and imported ingredients.
-          </p>
-          <button class="control__btn btn-bg btn--stroke btn-reset">
-            BROWSE OUR RANGE
-          </button>
-        </div>
-        <div class="control-images flex">
-          <div class="control-images__left">
-            <img class="control__small-img" src="img/control-1.webp" alt="hair skin">
-            <img class="control__small-img" src="img/control-2.webp" alt="apple cider vinegar">
-          </div>
-          <div class="control__images__right">
-            <img class="control__big-img" src="img/control-3.webp" alt="more vitamins">
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="products">
-      <div class="container products__container">
-        <h2 class="products__title section-title">
-          OUR PRODUCTS ARE
-        </h2>
-        <ul class="prices products__prices list-reset flex">
-          <li class="prices__item">
-            <a class="prices__link" href="#!">
-              <img class="prices__img" src="img/product-1.webp" alt="multi-vitamin (3 month supply)">
-              <h3 class="prices__subtitle">
-                MULTI-VITAMIN (3&nbsp;MONTH SUPPLY)
-              </h3>
-              <div class="prices__value">
-                <span class="prices__current-value" aria-label="discounted price">
-                  $39.95&nbsp;USD
-                </span>
-                <span class="prices__old-value" aria-label="price without discount">
-                  $199.75&nbsp;USD
-                </span>
-              </div>
-            </a>
-          </li>
-          <li class="prices__item">
-            <a class="prices__link" href="#!">
-              <img class="prices__img" src="img/product-2.webp" alt="vitamin c: immunity support">
-              <span class="prices__sale">
-                ON SALE
-              </span>
-              <h3 class="prices__subtitle">
-                VITAMIN C: IMMUNITY SUPPORT
-              </h3>
-              <div class="prices__value">
-                <span class="prices__current-value" aria-label="discounted price">
-                  $39.95&nbsp;USD
-                </span>
-                <span class="prices__old-value" aria-label="price without discount">
-                  $199.75&nbsp;USD
-                </span>
-              </div>
-            </a>
-          </li>
-          <li class="prices__item">
-            <a class="prices__link" href="#!">
-              <img class="prices__img" src="img/product-3.webp" alt="multi-vitamin (3 month supply)">
-              <span class="prices__sale">
-                ON SALE
-              </span>
-              <h3 class="prices__subtitle">
-                MULTI-VITAMIN (3&nbsp;MONTH SUPPLY)
-              </h3>
-              <div class="prices__value">
-                <span class="prices__current-value" aria-label="discounted price">
-                  $39.95&nbsp;USD
-                </span>
-                <span class="prices__old-value" aria-label="price without discount">
-                  $199.75&nbsp;USD
-                </span>
-              </div>
-            </a>
-          </li>
-          <li class="prices__item">
-            <a class="prices__link" href="#!">
-              <img class="prices__img" src="img/product-4.webp" alt="apple cider vinegar (3 month supply)">
-              <span class="prices__sale">
-                ON SALE
-              </span>
-              <h3 class="prices__subtitle">
-                APPLE CIDER VINEGAR (3 MONTH SUPPLY)
-              </h3>
-              <div class="prices__value">
-                <span class="prices__current-value" aria-label="discounted price">
-                  $39.95&nbsp;USD
-                </span>
-                <span class="prices__old-value" aria-label="price without discount">
-                  $199.75&nbsp;USD
-                </span>
-              </div>
-            </a>
-          </li>
-        </ul>
-        <button class="prices__button products__btn btn-bg btn-reset btn--stroke">
-          VIEW ALL PRODUCTS
-        </button>
-      </div>
-    </section>
-
-    <section class="reviews">
-      <div class="section-wrap reviews__wrap">
-        <h2 class="reviews__title">
-          real reviews
-        </h2>
-        <h3 class="reviews__subtitle">
-          real results
-        </h3>
-        <div class="reviews__slider-wrap">
-          <article class="reviews__item flex">
-            <h3 class="visually-hidden">Customer review</h3>
-            <div class="reviews__contant flex">
-              <div class="rating-wrap reviews__rating">
-                <span class="rating-wrap__result--active"></span>
-                <span class="rating-wrap__result--active"></span>
-                <span class="rating-wrap__result--active"></span>
-                <span class="rating-wrap__result--active"></span>
-                <span class="rating-wrap__result--inactive"></span>
-              </div>
-              <p class="reviews__text">
-                "In&nbsp;love with your products! The gummies have&nbsp;been so&nbsp;helpful with my&nbsp;postparum
-                journey,&nbsp;so&nbsp;easy to&nbsp;remember to&nbsp;take &amp;&nbsp;delicious also, check out that nail
-                growth."
-              </p>
-              <span class="reviews__name">
-                Tess A.
-              </span>
-            </div>
-            <img class="reviews__img" src="img/review.webp" alt="Feedback from a real buyer">
-          </article>
-          <article class="reviews__item flex">
-            <h3 class="visually-hidden">Customer review</h3>
-            <div class="reviews__contant">
-              <div class="rating-wrap reviews__rating">
-                <span class="rating-wrap__result--active"></span>
-                <span class="rating-wrap__result--active"></span>
-                <span class="rating-wrap__result--active"></span>
-                <span class="rating-wrap__result--active"></span>
-                <span class="rating-wrap__result--inactive"></span>
-              </div>
-              <p class="reviews__text">
-                "We&nbsp;have perfected our formulas over time, based on&nbsp;your feedback. Check out hundreds
-                of&nbsp;reviews on&nbsp;our website.We can&rsquo;t wait until you&nbsp;are a&nbsp;part of&nbsp;our
-                Good4Me
-                Family."
-              </p>
-              <span class="reviews__name">
-                Chloe H.
-              </span>
-            </div>
-            <img class="reviews__img" src="img/review-4.webp" alt="Feedback from a real buyer">
-          </article>
-          <article class="reviews__item flex">
-            <h3 class="visually-hidden">Customer review</h3>
-            <div class="reviews__contant">
-              <div class="rating-wrap reviews__rating">
-                <span class="rating-wrap__result--active"></span>
-                <span class="rating-wrap__result--active"></span>
-                <span class="rating-wrap__result--active"></span>
-                <span class="rating-wrap__result--inactive"></span>
-                <span class="rating-wrap__result--inactive"></span>
-              </div>
-              <p class="reviews__text">
-                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore consequuntur voluptatum optio
-                aspernatur possimus tenetur harum, distinctio at&nbsp;non explicabo ducimus!"
-              </p>
-              <span class="reviews__name">
-                Vera R.
-              </span>
-            </div>
-            <img class="reviews__img" src="img/review-5.webp" alt="Feedback from a real buyer">
-          </article>
-          <article class="reviews__item">
-            <h3 class="visually-hidden">Customer review</h3>
-            <div class="reviews__contant">
-              <div class="rating-wrap reviews__rating">
-                <span class="rating-wrap__result--active"></span>
-                <span class="rating-wrap__result--active"></span>
-                <span class="rating-wrap__result--active"></span>
-                <span class="rating-wrap__result--active"></span>
-                <span class="rating-wrap__result--active"></span>
-              </div>
-              <p class="reviews__text">
-                "Thank you for a&nbsp;good and quality product. We&nbsp;are committed to&nbsp;your values ​​and strive
-                to&nbsp;be&nbsp;as&nbsp;independent as&nbsp;you. And let darkness win now. Let Good4me live!"
-              </p>
-              <span class="reviews__name">
-                Hiva N.
-              </span>
-            </div>
-            <img class="reviews__img" src="img/review-3.webp" alt="Feedback from a real buyer">
-          </article>
-          <div class="reviews__btns">
-            <button class="reviews__btn reviews__btn-left btn-reset" aria-label="left button"><svg width="12"
-                height="20" viewbox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path class="reviews__btn-color"
-                  d="M11.097 2.72208L9.15273 0.777832L0.90273 9.02783C0.365105 9.56545 0.365105 10.4345 0.90273 10.9721L9.15273 19.2221L11.097 17.2778L3.8191 9.99995L11.097 2.72208Z" />
-              </svg></button>
-            <button class="reviews__btn reviews__btn-right btn-reset" aria-label="right button"><svg width="12"
-                height="20" viewbox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path class="reviews__btn-color"
-                  d="M0.903019 2.72208L2.84727 0.777832L11.0973 9.02783C11.6349 9.56545 11.6349 10.4345 11.0973 10.9721L2.84727 19.2221L0.903019 17.2778L8.1809 9.99995L0.903019 2.72208Z" />
-              </svg></button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="shop">
-      <div class="container">
-        <h2 class="shop__title section-title">
-          SHOP ALL
-        </h2>
-        <ul class="prices shop__prices list-reset flex">
-          <li class="shop__item prices__item">
-            <a class="prices__link" href="#!">
-              <img class="prices__img" src="img/shop-1.webp" alt="pre-order hair, skin & nails (5 month supply)">
-              <span class="prices__sale">
-                ON SALE
-              </span>
-              <h3 class="prices__subtitle">
-                **PRE-ORDER** HAIR, SKIN &amp;&nbsp;NAILS (5 MONTH&nbsp;SUPPLY)
-              </h3>
-              <div class="prices__value">
-                <span class="prices__current-value" aria-label="discounted price">
-                  $39.95&nbsp;USD
-                </span>
-                <span class="prices__old-value" aria-label="price without discount">
-                  $199.75&nbsp;USD
-                </span>
-              </div>
-            </a>
-          </li>
-          <li class="shop__item prices__item">
-            <a class="prices__link" href="#!">
-              <img class="prices__img" src="img/shop-2.webp" alt="detox + bloat support value pack">
-              <span class="prices__sale">
-                ON SALE
-              </span>
-              <h3 class="prices__subtitle">
-                DETOX + BLOAT SUPPORT VALUE PACK
-              </h3>
-              <div class="prices__value">
-                <span class="prices__current-value" aria-label="discounted price">
-                  $39.95&nbsp;USD
-                </span>
-                <span class="prices__old-value" aria-label="price without discount">
-                  $199.75&nbsp;USD
-                </span>
-              </div>
-            </a>
-          </li>
-          <li class="shop__item prices__item">
-            <a class="prices__link" href="#!">
-              <img class="prices__img" src="img/shop-3.webp" alt="probiotics: gut health + bloat support">
-              <span class="prices__sale">
-                ON SALE
-              </span>
-              <h3 class="prices__subtitle">
-                PROBIOTICS: GUT HEALTH + BLOAT SUPPORT
-              </h3>
-              <div class="prices__value">
-                <span class="prices__current-value" aria-label="discounted price">
-                  $39.95&nbsp;USD
-                </span>
-                <span class="prices__old-value" aria-label="price without discount">
-                  $199.75&nbsp;USD
-                </span>
-              </div>
-            </a>
-          </li>
-          <li class="shop__item prices__item">
-            <a class="prices__link" href="#!">
-              <img class="prices__img" src="img/shop-4.webp" alt="apple cider vinegar">
-              <span class="prices__sale">
-                ON SALE
-              </span>
-              <h3 class="prices__subtitle">
-                APPLE CIDER VINEGAR
-              </h3>
-              <div class="prices__value">
-                <span class="prices__current-value" aria-label="discounted price">
-                  $39.95&nbsp;USD
-                </span>
-                <span class="prices__old-value" aria-label="price without discount">
-                  $199.75&nbsp;USD
-                </span>
-              </div>
-            </a>
-          </li>
-        </ul>
-        <button class="shop__btn prices__button btn-bg btn-reset btn--stroke">
-          VIEW ALL PRODUCTS
-        </button>
-      </div>
-    </section>
-
-    <section class="news">
-      <div class="news__wrap section-wrap">
-        <h2 class="news__title section-title">
-          LATEST NEWS
-        </h2>
-        <div class="news__list flex">
-          <article class="news__item">
-            <img class="news__img" src="img/news-1.webp" alt="we donate one weeks supply">
-            <time class="news__date" datetime="2024-08-26">
-              August 26, 2024
-            </time>
-            <h3 class="news__subtitle">
-              WE&nbsp;DONATE ONE WEEKS SUPPLY
-            </h3>
-            <p class="news__descr">
-              We&nbsp;care about New Zealand children, and we&nbsp;want to&nbsp;support our community by&nbsp;providing
-              our children in&nbsp;need with necessary vitamins to&nbsp;improve....
-            </p>
-            <button class="news__btn btn-sm btn--fill btn-reset">
-              Read more
-            </button>
-          </article>
-          <article class="news__item">
-            <img class="news__img" src="img/news-2.webp" alt="we donate one weeks supply">
-            <time class="news__date" datetime="2024-08-27">
-              August 27, 2024
-            </time>
-            <h3 class="news__subtitle">
-              WE&nbsp;DONATE ONE WEEKS SUPPLY
-            </h3>
-            <p class="news__descr">
-              We&nbsp;care about New Zealand children, and we&nbsp;want to&nbsp;support our community by&nbsp;providing
-              our children in&nbsp;need with necessary vitamins to&nbsp;improve....
-            </p>
-            <button class="news__btn btn-sm btn--fill btn-reset">
-              Read more
-            </button>
-          </article>
-          <article class="news__item">
-            <img class="news__img" src="img/news-3.webp" alt="we donate one weeks supply">
-            <time class="news__date" datetime="2024-08-28">
-              August 28, 2024
-            </time>
-            <h3 class="news__subtitle">
-              WE&nbsp;DONATE ONE WEEKS SUPPLY
-            </h3>
-            <p class="news__descr">
-              We&nbsp;care about New Zealand children, and we&nbsp;want to&nbsp;support our community by&nbsp;providing
-              our children in&nbsp;need with necessary vitamins to&nbsp;improve....
-            </p>
-            <button class="news__btn btn-sm btn--fill btn-reset">
-              Read more
-            </button>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="social-media">
-      <h2 class="social-media__title section-title">
-        #GOOD4ME
-      </h2>
-      <div class="splide">
-        <div class="splide__track">
-          <ul class="social-media__list splide__list">
-            <li class="social-media__item splide__slide">
-              <img class="social-media__img" src="img/card-1.webp" alt="social media image">
-            </li>
-            <li class="social-media__item splide__slide">
-              <img class="social-media__img" src="img/card-2.webp" alt="social media image">
-            </li>
-            <li class="social-media__item splide__slide">
-              <img class="social-media__img" src="img/card-3.webp" alt="social media image">
-            </li>
-            <li class="social-media__item splide__slide">
-              <img class="social-media__img" src="img/card-4.webp" alt="social media image">
-            </li>
-            <li class="social-media__item splide__slide">
-              <img class="social-media__img" src="img/card-5.webp" alt="social media image">
-            </li>
-            <li class="social-media__item splide__slide">
-              <img class="social-media__img" src="img/card-6.webp" alt="social media image">
-            </li>
-            <li class="social-media__item splide__slide">
-              <img class="social-media__img" src="img/card-7.webp" alt="social media image">
-            </li>
-            <li class="social-media__item splide__slide">
-              <img class="social-media__img" src="img/card-8.webp" alt="social media image">
-            </li>
-            <li class="social-media__item splide__slide">
-              <img class="social-media__img" src="img/card-9.webp" alt="social media image">
-            </li>
-            <li class="social-media__item splide__slide">
-              <img class="social-media__img" src="img/card-10.webp" alt="social media image">
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="container">
-      <div class="footer__top flex">
-        <div class="footer__contant">
-          <a class="logo footer__logo" href="#!" aria-label="Logotype">
-            <img class="footer__logo-img" src="icons/logo.png" alt="Logotype">
-          </a>
-          <p class="footer__descr">
-            Good health is&nbsp;important, so&nbsp;all of&nbsp;our products have been carefully designed to&nbsp;bring
-            out the best in&nbsp;you.
-          </p>
-        </div>
-        <div class="subscribe footer__subscribe">
-          <div class="subscribe__contant">
-            <h3 class="subscribe__title">
-              Keep In&nbsp;Touch
-            </h3>
-            <p class="subscribe__descr">
-              Subscribe to&nbsp;receive new product updates, be&nbsp;the first to&nbsp;know about sales, and more.
-            </p>
-          </div>
-          <form action="#" class="subscribe__form footer__form flex">
-            <input class="subscribe__form-input" type="email" placeholder="Enter your email address">
-            <button class="subscribe__form-btn btn-reset" aria-label="Enter email">
-              Subscribe
-            </button>
-          </form>
-        </div>
-        <div class="footer__links">
-          <h3 class="footer__links-title">
-            MORE INFO
-          </h3>
-          <nav class="footer__nav">
-            <ul class="footer__nav-list list-reset">
-              <li class="footer__nav-item">
-                <a class="footer__nav-link" href="#!">
-                  Shipping &amp;&nbsp;Delivery
-                </a>
+          <nav class="nav">
+            <ul class="nav__list list-reset flex">
+              <li class="nav__item">
+                <a class="nav__link nav__link--active" href="#!"> HOME </a>
               </li>
-              <li class="footer__nav-item">
-                <a class="footer__nav-link" href="#!">
-                  Refund Policy
-                </a>
+              <li class="nav__item">
+                <a class="nav__link" href="#!"> SHOP </a>
               </li>
-              <li class="footer__nav-item">
-                <a class="footer__nav-link" href="#!">
-                  Partner Program
-                </a>
+              <li class="nav__item">
+                <a class="nav__link" href="#!"> FAQ'S </a>
               </li>
-              <li class="footer__nav-item">
-                <a class="footer__nav-link" href="#!">
-                  Wholesale Portal
-                </a>
+              <li class="nav__item">
+                <a class="nav__link" href="#!"> STOCKISTS </a>
               </li>
-              <li class="footer__nav-item">
-                <a class="footer__nav-link" href="#!">
-                  You Buy, We&nbsp;Donate
-                </a>
+              <li class="nav__item">
+                <a class="nav__link" href="#!"> WHOLESALE </a>
               </li>
-              <li class="footer__nav-item">
-                <a class="footer__nav-link" href="#!">
-                  Privacy Policy
-                </a>
-              </li>
-              <li class="footer__nav-item">
-                <a class="footer__nav-link" href="#!">
-                  Terms &amp;&nbsp;Conditions
-                </a>
+              <li class="nav__item">
+                <a class="nav__link" href="#!"> CONTACT </a>
               </li>
             </ul>
           </nav>
+          <div class="header-bottom__right flex">
+            <div class="search-modal flex">
+              <div class="search-wrapper flex">
+                <form class="search-form" action="#!">
+                  <input
+                    class="search-form__input"
+                    type="text"
+                    placeholder="Search"
+                  />
+                  <button
+                    class="search-form__btn"
+                    type="submit"
+                    aria-label="search button"
+                  >
+                    <svg width="18" height="18" viewbox="0 0 22 22" fill="none">
+                      <g>
+                        <path
+                          class="search-icon"
+                          d="M21.7312 20.4352L15.475 14.179C16.6868 12.6821 17.4165 10.78 17.4165 8.70842C17.4165 3.90696 13.5097 0.000152588 8.70822 0.000152588C3.90677 0.000152588 0 3.90692 0 8.70837C0 13.5098 3.90681 17.4166 8.70826 17.4166C10.7799 17.4166 12.682 16.687 14.1789 15.4752L20.4351 21.7313C20.6138 21.9101 20.8484 21.9999 21.0831 21.9999C21.3178 21.9999 21.5525 21.9101 21.7312 21.7313C22.0896 21.3729 22.0896 20.7936 21.7312 20.4352ZM8.70826 15.5833C4.91695 15.5833 1.83333 12.4997 1.83333 8.70837C1.83333 4.91706 4.91695 1.83344 8.70826 1.83344C12.4996 1.83344 15.5832 4.91706 15.5832 8.70837C15.5832 12.4997 12.4995 15.5833 8.70826 15.5833Z"
+                        />
+                      </g>
+                      <defs>
+                        <clippath id="clip0_9160_172">
+                          <rect width="22" height="22" fill="white" />
+                        </clippath>
+                      </defs>
+                    </svg>
+                  </button>
+                </form>
+              </div>
+            </div>
+            <span
+              class="search-open"
+              tabindex="0"
+              aria-label="open search form"
+            >
+              <svg
+                width="22"
+                height="22"
+                viewbox="0 0 22 22"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g>
+                  <path
+                    class="search-icon"
+                    d="M21.7312 20.4352L15.475 14.179C16.6868 12.6821 17.4165 10.78 17.4165 8.70842C17.4165 3.90696 13.5097 0.000152588 8.70822 0.000152588C3.90677 0.000152588 0 3.90692 0 8.70837C0 13.5098 3.90681 17.4166 8.70826 17.4166C10.7799 17.4166 12.682 16.687 14.1789 15.4752L20.4351 21.7313C20.6138 21.9101 20.8484 21.9999 21.0831 21.9999C21.3178 21.9999 21.5525 21.9101 21.7312 21.7313C22.0896 21.3729 22.0896 20.7936 21.7312 20.4352ZM8.70826 15.5833C4.91695 15.5833 1.83333 12.4997 1.83333 8.70837C1.83333 4.91706 4.91695 1.83344 8.70826 1.83344C12.4996 1.83344 15.5832 4.91706 15.5832 8.70837C15.5832 12.4997 12.4995 15.5833 8.70826 15.5833Z"
+                  />
+                </g>
+                <defs>
+                  <clippath id="cli0_9160_172">
+                    <rect width="22" height="22" fill="white" />
+                  </clippath>
+                </defs>
+              </svg>
+            </span>
+            <a class="cart" href="#!" aria-label="Cart">
+              <svg
+                width="21"
+                height="24"
+                viewbox="0 0 21 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  class="cart-icon"
+                  d="M15.2523 6.64357H14.3686V5.3685C14.3685 2.40813 11.9602 0 8.99991 0C6.03966 0 3.63119 2.40847 3.63119 5.3685V6.64357H2.74748C1.31064 6.64357 0.141602 7.81261 0.141602 9.24944V21.3941C0.141602 22.8313 1.31064 24 2.74748 24H15.2522C16.6891 24 17.8581 22.8312 17.8581 21.3941V9.24944C17.8581 7.81261 16.6891 6.64357 15.2523 6.64357ZM5.33124 5.3685C5.33124 3.34569 6.97688 1.70005 8.99991 1.70005C11.0227 1.70005 12.6684 3.34569 12.6684 5.3685V6.64357H5.33124V5.3685ZM16.1582 21.3941C16.1582 21.894 15.7516 22.2999 15.2523 22.2999H2.74737C2.24787 22.2999 1.84154 21.8936 1.84154 21.3941V9.24944C1.84154 8.74994 2.24787 8.34361 2.74737 8.34361H3.63108V9.53567C3.35792 9.77363 3.18174 10.1202 3.18174 10.5112C3.18174 11.2289 3.76346 11.8109 4.48116 11.8109C5.19862 11.8109 5.78058 11.2289 5.78058 10.5112C5.78058 10.1205 5.60428 9.77397 5.33124 9.53567V8.34361H12.6684V9.53567C12.3952 9.77363 12.219 10.1202 12.219 10.5112C12.219 11.2289 12.8007 11.8109 13.5184 11.8109C14.2361 11.8109 14.8179 11.2289 14.8179 10.5112C14.8179 10.1205 14.6416 9.77363 14.3685 9.53567V8.34361H15.2522C15.7517 8.34361 16.1581 8.74994 16.1581 9.24944V21.3941H16.1582Z"
+                />
+                <path
+                  d="M16.25 8.5C16.25 8.90667 16.29 9.28333 16.37 9.63C16.45 9.97 16.5667 10.2667 16.72 10.52C16.8733 10.7667 17.0567 10.96 17.27 11.1C17.49 11.2333 17.7333 11.3 18 11.3C18.2733 11.3 18.5167 11.2333 18.73 11.1C18.9433 10.96 19.1267 10.7667 19.28 10.52C19.4333 10.2667 19.55 9.97 19.63 9.63C19.71 9.28333 19.75 8.90667 19.75 8.5C19.75 8.09333 19.71 7.72 19.63 7.38C19.55 7.03333 19.4333 6.73667 19.28 6.49C19.1267 6.23667 18.9433 6.04333 18.73 5.91C18.5167 5.77 18.2733 5.7 18 5.7C17.7333 5.7 17.49 5.77 17.27 5.91C17.0567 6.04333 16.8733 6.23667 16.72 6.49C16.5667 6.73667 16.45 7.03333 16.37 7.38C16.29 7.72 16.25 8.09333 16.25 8.5ZM15.4 8.5C15.4 7.8 15.51 7.18 15.73 6.64C15.95 6.1 16.2533 5.67667 16.64 5.37C17.0333 5.05667 17.4867 4.9 18 4.9C18.5133 4.9 18.9633 5.05667 19.35 5.37C19.7433 5.67667 20.05 6.1 20.27 6.64C20.49 7.18 20.6 7.8 20.6 8.5C20.6 9.2 20.49 9.82 20.27 10.36C20.05 10.9 19.7433 11.3267 19.35 11.64C18.9633 11.9467 18.5133 12.1 18 12.1C17.4867 12.1 17.0333 11.9467 16.64 11.64C16.2533 11.3267 15.95 10.9 15.73 10.36C15.51 9.82 15.4 9.2 15.4 8.5Z"
+                  fill="white"
+                />
+              </svg>
+              <span class="cart__count flex">0</span>
+            </a>
+          </div>
         </div>
       </div>
-      <div class="footer__bottom flex">
-        <ul class="footer__social list-reset flex">
-          <li class="footer__social-item">
-            <a class="footer__social-link" href="#!" aria-label="facebook">
-              <svg width="8" height="14" viewbox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path class="footer__social-icon"
-                  d="M7.28408 0.00291293L5.4686 0C3.42896 0 2.11086 1.35233 2.11086 3.44542V5.03399H0.285468C0.127732 5.03399 0 5.16187 0 5.3196V7.62126C0 7.77899 0.127878 7.90672 0.285468 7.90672H2.11086V13.7145C2.11086 13.8723 2.23859 14 2.39633 14H4.77794C4.93568 14 5.06341 13.8721 5.06341 13.7145V7.90672H7.19772C7.35545 7.90672 7.48318 7.77899 7.48318 7.62126L7.48406 5.3196C7.48406 5.24386 7.45391 5.17133 7.40046 5.11773C7.347 5.06414 7.27418 5.03399 7.19844 5.03399H5.06341V3.68734C5.06341 3.04008 5.21765 2.71151 6.0608 2.71151L7.28379 2.71107C7.44138 2.71107 7.56911 2.58319 7.56911 2.4256V0.288381C7.56911 0.130936 7.44153 0.00320423 7.28408 0.00291293Z" />
-              </svg>
-            </a>
-          </li>
-          <li class="footer__social-item">
-            <a class="footer__social-link" href="#!" aria-label="instagram">
-              <svg width="14" height="14" viewbox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path class="footer__social-icon"
-                  d="M7.13781 14C7.09145 14 7.04509 14 6.99842 13.9998C5.90103 14.0025 4.88707 13.9746 3.90098 13.9146C2.99693 13.8595 2.1717 13.5471 1.51438 13.0111C0.880129 12.494 0.447007 11.7947 0.227082 10.9329C0.0356752 10.1827 0.025528 9.44619 0.0158081 8.73386C0.00875856 8.22276 0.00149537 7.61714 0 7.00126C0.00149537 6.38282 0.00875856 5.7772 0.0158081 5.2661C0.025528 4.55388 0.0356752 3.81742 0.227082 3.06706C0.447007 2.2053 0.880129 1.50601 1.51438 0.988825C2.1717 0.452843 2.99693 0.140418 3.90109 0.0854102C4.88717 0.0254888 5.90135 -0.00249595 7.00109 0.000174347C8.09879 -0.00217551 9.11244 0.0254888 10.0985 0.0854102C11.0026 0.140418 11.8278 0.452843 12.4851 0.988825C13.1195 1.50601 13.5525 2.2053 13.7724 3.06706C13.9638 3.81731 13.974 4.55388 13.9837 5.2661C13.9907 5.7772 13.9981 6.38282 13.9995 6.9987V7.00126C13.9981 7.61714 13.9907 8.22276 13.9837 8.73386C13.974 9.44608 13.9639 10.1825 13.7724 10.9329C13.5525 11.7947 13.1195 12.494 12.4851 13.0111C11.8278 13.5471 11.0026 13.8595 10.0985 13.9146C9.1542 13.972 8.18413 14 7.13781 14ZM6.99842 12.906C8.07796 12.9086 9.06918 12.8814 10.0321 12.8228C10.7157 12.7813 11.3084 12.5594 11.7939 12.1635C12.2428 11.7974 12.5519 11.2924 12.7126 10.6625C12.872 10.0379 12.8812 9.36736 12.89 8.7189C12.897 8.21123 12.9043 7.60988 12.9058 6.99998C12.9043 6.38998 12.897 5.78873 12.89 5.28106C12.8812 4.6326 12.872 3.96204 12.7126 3.3374C12.5519 2.70743 12.2428 2.20242 11.7939 1.83638C11.3084 1.44053 10.7157 1.21868 10.0321 1.17713C9.06918 1.11849 8.07796 1.09147 7.00098 1.09382C5.92165 1.09126 4.93033 1.11849 3.96742 1.17713C3.28382 1.21868 2.69112 1.44053 2.20556 1.83638C1.75673 2.20242 1.44762 2.70743 1.28687 3.3374C1.12751 3.96204 1.11832 4.6325 1.10945 5.28106C1.10251 5.78916 1.09525 6.39083 1.09375 7.00126C1.09525 7.60902 1.10251 8.2108 1.10945 8.7189C1.11832 9.36736 1.12751 10.0379 1.28687 10.6625C1.44762 11.2924 1.75673 11.7974 2.20556 12.1635C2.69112 12.5593 3.28382 12.7812 3.96742 12.8227C4.93033 12.8814 5.92186 12.9087 6.99842 12.906ZM6.97235 10.418C5.08777 10.418 3.55438 8.88468 3.55438 6.99998C3.55438 5.11529 5.08777 3.582 6.97235 3.582C8.85705 3.582 10.3903 5.11529 10.3903 6.99998C10.3903 8.88468 8.85705 10.418 6.97235 10.418ZM6.97235 4.67576C5.69083 4.67576 4.64813 5.71845 4.64813 6.99998C4.64813 8.28151 5.69083 9.32421 6.97235 9.32421C8.25399 9.32421 9.29658 8.28151 9.29658 6.99998C9.29658 5.71845 8.25399 4.67576 6.97235 4.67576ZM10.7731 2.48825C10.3202 2.48825 9.95283 2.85547 9.95283 3.30856C9.95283 3.76166 10.3202 4.12888 10.7731 4.12888C11.2262 4.12888 11.5935 3.76166 11.5935 3.30856C11.5935 2.85547 11.2262 2.48825 10.7731 2.48825Z" />
-              </svg>
-            </a>
-          </li>
-          <li class="footer__social-item">
-            <a class="footer__social-link" href="#!" aria-label="twitter">
-              <svg width="18" height="14" viewbox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path class="footer__social-icon"
-                  d="M17.2308 1.65738C16.59 1.93846 15.9072 2.12477 15.1954 2.21523C15.9277 1.778 16.4866 1.09092 16.7494 0.262769C16.0666 0.669846 15.3128 0.957385 14.5094 1.11785C13.8611 0.427539 12.9371 0 11.9291 0C9.97338 0 8.39892 1.58738 8.39892 3.53339C8.39892 3.81339 8.42262 4.08262 8.48077 4.33892C5.544 4.19569 2.94538 2.78815 1.19969 0.644C0.894923 1.17277 0.716154 1.778 0.716154 2.42954C0.716154 3.65292 1.34615 4.73738 2.28523 5.36523C1.71769 5.35446 1.16092 5.18969 0.689231 4.93015C0.689231 4.94092 0.689231 4.95492 0.689231 4.96892C0.689231 6.68554 1.91369 8.11139 3.51938 8.43985C3.23185 8.51846 2.91846 8.55615 2.59323 8.55615C2.36708 8.55615 2.13877 8.54323 1.92446 8.49585C2.38215 9.89477 3.68092 10.9232 5.22523 10.9566C4.02339 11.8968 2.49738 12.4632 0.845385 12.4632C0.555692 12.4632 0.277846 12.4503 0 12.4148C1.56477 13.4238 3.41923 14 5.41908 14C11.9194 14 15.4732 8.61539 15.4732 3.948C15.4732 3.79185 15.4678 3.64108 15.4603 3.49138C16.1614 2.99385 16.7505 2.37246 17.2308 1.65738Z" />
-              </svg>
-            </a>
-          </li>
-          <li class="footer__social-item">
-            <a class="footer__social-link" href="#!" aria-label="pinterest">
-              <svg width="12" height="14" viewbox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path class="footer__social-icon"
-                  d="M5.87764 0C2.04059 0 0 2.45886 0 5.13998C0 6.38341 0.694781 7.93398 1.80696 8.42576C1.97584 8.50188 2.06772 8.46951 2.10535 8.31288C2.1386 8.19387 2.28473 7.62072 2.35561 7.35033C2.37748 7.2637 2.36611 7.18845 2.2961 7.10707C1.92684 6.68005 1.6337 5.90214 1.6337 5.17236C1.6337 3.3024 3.12039 1.48669 5.65013 1.48669C7.83773 1.48669 9.36817 2.90776 9.36817 4.94047C9.36817 7.23745 8.15274 8.82652 6.5733 8.82652C5.69913 8.82652 5.0481 8.14049 5.25461 7.29171C5.504 6.28103 5.99315 5.19424 5.99315 4.46533C5.99315 3.81167 5.62388 3.2709 4.8696 3.2709C3.97968 3.2709 3.25777 4.15206 3.25777 5.33512C3.25777 6.08678 3.52378 6.5943 3.52378 6.5943C3.52378 6.5943 2.64349 10.1505 2.47986 10.8146C2.20335 11.939 2.51749 13.76 2.54462 13.9166C2.56124 14.0033 2.65837 14.0304 2.71262 13.9595C2.79925 13.8458 3.8633 12.3276 4.16169 11.2303C4.27019 10.8304 4.71559 9.20892 4.71559 9.20892C5.00873 9.73832 5.85489 10.182 6.75618 10.182C9.4373 10.182 11.3746 7.82548 11.3746 4.9011C11.365 2.09747 8.96566 0 5.87764 0Z" />
-              </svg>
-            </a>
-          </li>
-          <li class="footer__social-item">
-            <a class="footer__social-link" href="#!" aria-label="youtube">
-              <svg width="21" height="14" viewbox="0 0 21 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path class="footer__social-icon"
-                  d="M19.4982 1.34909C18.9458 0.366545 18.3464 0.185818 17.1258 0.117091C15.9065 0.0343636 12.8405 0 10.1844 0C7.52309 0 4.45582 0.0343637 3.23782 0.115818C2.01982 0.185818 1.41909 0.365273 0.861636 1.34909C0.292727 2.33036 0 4.02055 0 6.99618C0 6.99873 0 7 0 7C0 7.00255 0 7.00382 0 7.00382V7.00636C0 9.96927 0.292727 11.6722 0.861636 12.6433C1.41909 13.6258 2.01855 13.804 3.23655 13.8867C4.45582 13.958 7.52309 14 10.1844 14C12.8405 14 15.9065 13.958 17.1271 13.888C18.3476 13.8053 18.9471 13.6271 19.4995 12.6445C20.0735 11.6735 20.3636 9.97054 20.3636 7.00764C20.3636 7.00764 20.3636 7.00382 20.3636 7.00127C20.3636 7.00127 20.3636 6.99873 20.3636 6.99745C20.3636 4.02055 20.0735 2.33036 19.4982 1.34909ZM7.63636 10.8182V3.18182L14 7L7.63636 10.8182Z" />
-              </svg>
-            </a>
-          </li>
-        </ul>
-        <div class="owner">
-          <span class="owner__date">
-            &#169; 2021,
-          </span>
-          <span class="owner__brand">
-            GOOD4ME.
-          </span>
-          <span class="owner__sign">
-            Powered by Shopify
-          </span>
+    </header>
+
+    <main class="main">
+      <section class="hero">
+        <div class="section-wrap hero__wrap flex">
+          <div class="hero__content">
+            <h1 class="hero__title">Good4Me</h1>
+            <h2 class="hero__subtitle subtitle-bg">Apple Cider Vinegar</h2>
+            <p class="hero__descr">
+              Good4Me Apple Cider Vinegar gummies are the newest addition
+              to&nbsp;your morning health and well-being regime.
+            </p>
+            <button class="hero__btn btn-sm btn-reset btn--fill">
+              Shop Now
+            </button>
+          </div>
         </div>
-        <div class="footer__payments">
-          <img src="/icons/pay.png" alt="payment methods">
+      </section>
+
+      <section class="deal">
+        <div class="container">
+          <h2 class="deal__title section-title">GOOD4ME DEAL</h2>
+          <p class="deal__descr">
+            Pick your beauty products today.&nbsp;50% OFF on&nbsp;the most
+            popular GOOD4ME. Order all classy products today!
+          </p>
+          <ul class="prices deal__prices list-reset flex">
+            <li class="prices__item">
+              <a href="#!" class="prices__link">
+                <img
+                  class="prices__img deal__img"
+                  src="img/multi.webp"
+                  alt="MULTI-VITAMIN: EVERYDAY WELLNESS"
+                />
+                <h3 class="deal__subtitle">MULTI-VITAMIN: EVERYDAY WELLNESS</h3>
+              </a>
+            </li>
+            <li class="prices__item">
+              <a href="#!" class="prices__link">
+                <img
+                  class="prices__img deal__img"
+                  src="img/full.webp"
+                  alt="FULL RANGE VALUE PACK (SAVE 33%)"
+                />
+                <h3 class="deal__subtitle">
+                  FULL&nbsp;RANGE VALUE PACK (SAVE&nbsp;33%)
+                </h3>
+              </a>
+            </li>
+            <li class="prices__item">
+              <a href="#!" class="prices__link">
+                <img
+                  class="prices__img deal__img"
+                  src="img/immunity.webp"
+                  alt="VITAMIN C: IMMUNITY SUPPORT"
+                />
+                <h3 class="deal__subtitle">VITAMIN C: IMMUNITY SUPPORT</h3>
+              </a>
+            </li>
+            <li class="prices__item">
+              <a href="#!" class="prices__link">
+                <img
+                  class="prices__img deal__img"
+                  src="img/energy.webp"
+                  alt="IRON: ENERGY SUPPORT"
+                />
+                <h3 class="deal__subtitle">IRON: ENERGY SUPPORT</h3>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="advantages">
+        <div class="section-wrap advantages__wrap">
+          <h2 class="visually-hidden">Advantages</h2>
+          <ul class="advantages__list list-reset flex">
+            <li class="advantages__item advantages__item-1">
+              <h3 class="advantages__title">WORLDWIDE SHIPPING</h3>
+              <p class="advantages__descr">
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+              </p>
+            </li>
+            <li class="advantages__item advantages__item-2">
+              <h3 class="advantages__title">30 DAYS GUARANTEE</h3>
+              <p class="advantages__descr">
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+              </p>
+            </li>
+            <li class="advantages__item advantages__item-3">
+              <h3 class="advantages__title">SECURED PAYMENTS</h3>
+              <p class="advantages__descr">
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="control">
+        <div class="container control__container flex">
+          <div class="control__contant">
+            <h2 class="control__title">TAKE CONTROL OF YOUR HEALTH</h2>
+            <p class="control__descr">
+              The Good4Me range has been formulated based on scientific &amp;
+              traditional evidence.
+            </p>
+            <p class="control__descr">
+              Our vitamins are here and ready to&nbsp;boost your mood, immunity
+              and overall well-being!
+            </p>
+            <p class="control__descr">
+              Made in&nbsp;New Zealand from local and imported ingredients.
+            </p>
+            <button class="control__btn btn-bg btn--stroke btn-reset">
+              BROWSE OUR RANGE
+            </button>
+          </div>
+          <div class="control-images flex">
+            <div class="control-images__left">
+              <img
+                class="control__small-img"
+                src="img/control-1.webp"
+                alt="hair skin"
+              />
+              <img
+                class="control__small-img"
+                src="img/control-2.webp"
+                alt="apple cider vinegar"
+              />
+            </div>
+            <div class="control__images__right">
+              <img
+                class="control__big-img"
+                src="img/control-3.webp"
+                alt="more vitamins"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="products">
+        <div class="container products__container">
+          <h2 class="products__title section-title">OUR PRODUCTS ARE</h2>
+          <ul class="prices products__prices list-reset flex">
+            <li class="prices__item">
+              <a class="prices__link" href="#!">
+                <img
+                  class="prices__img"
+                  src="img/product-1.webp"
+                  alt="multi-vitamin (3 month supply)"
+                />
+                <h3 class="prices__subtitle">
+                  MULTI-VITAMIN (3&nbsp;MONTH SUPPLY)
+                </h3>
+                <div class="prices__value">
+                  <span
+                    class="prices__current-value"
+                    aria-label="discounted price"
+                  >
+                    $39.95&nbsp;USD
+                  </span>
+                  <span
+                    class="prices__old-value"
+                    aria-label="price without discount"
+                  >
+                    $199.75&nbsp;USD
+                  </span>
+                </div>
+              </a>
+            </li>
+            <li class="prices__item">
+              <a class="prices__link" href="#!">
+                <img
+                  class="prices__img"
+                  src="img/product-2.webp"
+                  alt="vitamin c: immunity support"
+                />
+                <span class="prices__sale"> ON SALE </span>
+                <h3 class="prices__subtitle">VITAMIN C: IMMUNITY SUPPORT</h3>
+                <div class="prices__value">
+                  <span
+                    class="prices__current-value"
+                    aria-label="discounted price"
+                  >
+                    $39.95&nbsp;USD
+                  </span>
+                  <span
+                    class="prices__old-value"
+                    aria-label="price without discount"
+                  >
+                    $199.75&nbsp;USD
+                  </span>
+                </div>
+              </a>
+            </li>
+            <li class="prices__item">
+              <a class="prices__link" href="#!">
+                <img
+                  class="prices__img"
+                  src="img/product-3.webp"
+                  alt="multi-vitamin (3 month supply)"
+                />
+                <span class="prices__sale"> ON SALE </span>
+                <h3 class="prices__subtitle">
+                  MULTI-VITAMIN (3&nbsp;MONTH SUPPLY)
+                </h3>
+                <div class="prices__value">
+                  <span
+                    class="prices__current-value"
+                    aria-label="discounted price"
+                  >
+                    $39.95&nbsp;USD
+                  </span>
+                  <span
+                    class="prices__old-value"
+                    aria-label="price without discount"
+                  >
+                    $199.75&nbsp;USD
+                  </span>
+                </div>
+              </a>
+            </li>
+            <li class="prices__item">
+              <a class="prices__link" href="#!">
+                <img
+                  class="prices__img"
+                  src="img/product-4.webp"
+                  alt="apple cider vinegar (3 month supply)"
+                />
+                <span class="prices__sale"> ON SALE </span>
+                <h3 class="prices__subtitle">
+                  APPLE CIDER VINEGAR (3 MONTH SUPPLY)
+                </h3>
+                <div class="prices__value">
+                  <span
+                    class="prices__current-value"
+                    aria-label="discounted price"
+                  >
+                    $39.95&nbsp;USD
+                  </span>
+                  <span
+                    class="prices__old-value"
+                    aria-label="price without discount"
+                  >
+                    $199.75&nbsp;USD
+                  </span>
+                </div>
+              </a>
+            </li>
+          </ul>
+          <button
+            class="prices__button products__btn btn-bg btn-reset btn--stroke"
+          >
+            VIEW ALL PRODUCTS
+          </button>
+        </div>
+      </section>
+
+      <section class="reviews">
+        <div class="section-wrap reviews__wrap">
+          <h2 class="reviews__title">real reviews</h2>
+          <h3 class="reviews__subtitle">real results</h3>
+          <div class="reviews__slider-wrap">
+            <article class="reviews__item flex">
+              <h3 class="visually-hidden">Customer review</h3>
+              <div class="reviews__contant flex">
+                <div class="rating-wrap reviews__rating">
+                  <span class="rating-wrap__result--active"></span>
+                  <span class="rating-wrap__result--active"></span>
+                  <span class="rating-wrap__result--active"></span>
+                  <span class="rating-wrap__result--active"></span>
+                  <span class="rating-wrap__result--inactive"></span>
+                </div>
+                <p class="reviews__text">
+                  "In&nbsp;love with your products! The gummies have&nbsp;been
+                  so&nbsp;helpful with my&nbsp;postparum
+                  journey,&nbsp;so&nbsp;easy to&nbsp;remember to&nbsp;take
+                  &amp;&nbsp;delicious also, check out that nail growth."
+                </p>
+                <span class="reviews__name"> Tess A. </span>
+              </div>
+              <img
+                class="reviews__img"
+                src="img/review.webp"
+                alt="Feedback from a real buyer"
+              />
+            </article>
+            <article class="reviews__item flex">
+              <h3 class="visually-hidden">Customer review</h3>
+              <div class="reviews__contant">
+                <div class="rating-wrap reviews__rating">
+                  <span class="rating-wrap__result--active"></span>
+                  <span class="rating-wrap__result--active"></span>
+                  <span class="rating-wrap__result--active"></span>
+                  <span class="rating-wrap__result--active"></span>
+                  <span class="rating-wrap__result--inactive"></span>
+                </div>
+                <p class="reviews__text">
+                  "We&nbsp;have perfected our formulas over time, based
+                  on&nbsp;your feedback. Check out hundreds of&nbsp;reviews
+                  on&nbsp;our website.We can&rsquo;t wait until you&nbsp;are
+                  a&nbsp;part of&nbsp;our Good4Me Family."
+                </p>
+                <span class="reviews__name"> Chloe H. </span>
+              </div>
+              <img
+                class="reviews__img"
+                src="img/review-4.webp"
+                alt="Feedback from a real buyer"
+              />
+            </article>
+            <article class="reviews__item flex">
+              <h3 class="visually-hidden">Customer review</h3>
+              <div class="reviews__contant">
+                <div class="rating-wrap reviews__rating">
+                  <span class="rating-wrap__result--active"></span>
+                  <span class="rating-wrap__result--active"></span>
+                  <span class="rating-wrap__result--active"></span>
+                  <span class="rating-wrap__result--inactive"></span>
+                  <span class="rating-wrap__result--inactive"></span>
+                </div>
+                <p class="reviews__text">
+                  "Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Tempore consequuntur voluptatum optio aspernatur possimus
+                  tenetur harum, distinctio at&nbsp;non explicabo ducimus!"
+                </p>
+                <span class="reviews__name"> Vera R. </span>
+              </div>
+              <img
+                class="reviews__img"
+                src="img/review-5.webp"
+                alt="Feedback from a real buyer"
+              />
+            </article>
+            <article class="reviews__item">
+              <h3 class="visually-hidden">Customer review</h3>
+              <div class="reviews__contant">
+                <div class="rating-wrap reviews__rating">
+                  <span class="rating-wrap__result--active"></span>
+                  <span class="rating-wrap__result--active"></span>
+                  <span class="rating-wrap__result--active"></span>
+                  <span class="rating-wrap__result--active"></span>
+                  <span class="rating-wrap__result--active"></span>
+                </div>
+                <p class="reviews__text">
+                  "Thank you for a&nbsp;good and quality product. We&nbsp;are
+                  committed to&nbsp;your values ​​and strive
+                  to&nbsp;be&nbsp;as&nbsp;independent as&nbsp;you. And let
+                  darkness win now. Let Good4me live!"
+                </p>
+                <span class="reviews__name"> Hiva N. </span>
+              </div>
+              <img
+                class="reviews__img"
+                src="img/review-3.webp"
+                alt="Feedback from a real buyer"
+              />
+            </article>
+            <div class="reviews__btns">
+              <button
+                class="reviews__btn reviews__btn-left btn-reset"
+                aria-label="left button"
+              >
+                <svg
+                  width="12"
+                  height="20"
+                  viewbox="0 0 12 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    class="reviews__btn-color"
+                    d="M11.097 2.72208L9.15273 0.777832L0.90273 9.02783C0.365105 9.56545 0.365105 10.4345 0.90273 10.9721L9.15273 19.2221L11.097 17.2778L3.8191 9.99995L11.097 2.72208Z"
+                  />
+                </svg>
+              </button>
+              <button
+                class="reviews__btn reviews__btn-right btn-reset"
+                aria-label="right button"
+              >
+                <svg
+                  width="12"
+                  height="20"
+                  viewbox="0 0 12 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    class="reviews__btn-color"
+                    d="M0.903019 2.72208L2.84727 0.777832L11.0973 9.02783C11.6349 9.56545 11.6349 10.4345 11.0973 10.9721L2.84727 19.2221L0.903019 17.2778L8.1809 9.99995L0.903019 2.72208Z"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="shop">
+        <div class="container">
+          <h2 class="shop__title section-title">SHOP ALL</h2>
+          <ul class="prices shop__prices list-reset flex">
+            <li class="shop__item prices__item">
+              <a class="prices__link" href="#!">
+                <img
+                  class="prices__img"
+                  src="img/shop-1.webp"
+                  alt="pre-order hair, skin & nails (5 month supply)"
+                />
+                <span class="prices__sale"> ON SALE </span>
+                <h3 class="prices__subtitle">
+                  **PRE-ORDER** HAIR, SKIN &amp;&nbsp;NAILS (5
+                  MONTH&nbsp;SUPPLY)
+                </h3>
+                <div class="prices__value">
+                  <span
+                    class="prices__current-value"
+                    aria-label="discounted price"
+                  >
+                    $39.95&nbsp;USD
+                  </span>
+                  <span
+                    class="prices__old-value"
+                    aria-label="price without discount"
+                  >
+                    $199.75&nbsp;USD
+                  </span>
+                </div>
+              </a>
+            </li>
+            <li class="shop__item prices__item">
+              <a class="prices__link" href="#!">
+                <img
+                  class="prices__img"
+                  src="img/shop-2.webp"
+                  alt="detox + bloat support value pack"
+                />
+                <span class="prices__sale"> ON SALE </span>
+                <h3 class="prices__subtitle">
+                  DETOX + BLOAT SUPPORT VALUE PACK
+                </h3>
+                <div class="prices__value">
+                  <span
+                    class="prices__current-value"
+                    aria-label="discounted price"
+                  >
+                    $39.95&nbsp;USD
+                  </span>
+                  <span
+                    class="prices__old-value"
+                    aria-label="price without discount"
+                  >
+                    $199.75&nbsp;USD
+                  </span>
+                </div>
+              </a>
+            </li>
+            <li class="shop__item prices__item">
+              <a class="prices__link" href="#!">
+                <img
+                  class="prices__img"
+                  src="img/shop-3.webp"
+                  alt="probiotics: gut health + bloat support"
+                />
+                <span class="prices__sale"> ON SALE </span>
+                <h3 class="prices__subtitle">
+                  PROBIOTICS: GUT HEALTH + BLOAT SUPPORT
+                </h3>
+                <div class="prices__value">
+                  <span
+                    class="prices__current-value"
+                    aria-label="discounted price"
+                  >
+                    $39.95&nbsp;USD
+                  </span>
+                  <span
+                    class="prices__old-value"
+                    aria-label="price without discount"
+                  >
+                    $199.75&nbsp;USD
+                  </span>
+                </div>
+              </a>
+            </li>
+            <li class="shop__item prices__item">
+              <a class="prices__link" href="#!">
+                <img
+                  class="prices__img"
+                  src="img/shop-4.webp"
+                  alt="apple cider vinegar"
+                />
+                <span class="prices__sale"> ON SALE </span>
+                <h3 class="prices__subtitle">APPLE CIDER VINEGAR</h3>
+                <div class="prices__value">
+                  <span
+                    class="prices__current-value"
+                    aria-label="discounted price"
+                  >
+                    $39.95&nbsp;USD
+                  </span>
+                  <span
+                    class="prices__old-value"
+                    aria-label="price without discount"
+                  >
+                    $199.75&nbsp;USD
+                  </span>
+                </div>
+              </a>
+            </li>
+          </ul>
+          <button class="shop__btn prices__button btn-bg btn-reset btn--stroke">
+            VIEW ALL PRODUCTS
+          </button>
+        </div>
+      </section>
+
+      <section class="news">
+        <div class="news__wrap section-wrap">
+          <h2 class="news__title section-title">LATEST NEWS</h2>
+          <div class="news__list flex">
+            <article class="news__item">
+              <img
+                class="news__img"
+                src="img/news-1.webp"
+                alt="we donate one weeks supply"
+              />
+              <time class="news__date" datetime="2024-08-26">
+                August 26, 2024
+              </time>
+              <h3 class="news__subtitle">WE&nbsp;DONATE ONE WEEKS SUPPLY</h3>
+              <p class="news__descr">
+                We&nbsp;care about New Zealand children, and we&nbsp;want
+                to&nbsp;support our community by&nbsp;providing our children
+                in&nbsp;need with necessary vitamins to&nbsp;improve....
+              </p>
+              <button class="news__btn btn-sm btn--fill btn-reset">
+                Read more
+              </button>
+            </article>
+            <article class="news__item">
+              <img
+                class="news__img"
+                src="img/news-2.webp"
+                alt="we donate one weeks supply"
+              />
+              <time class="news__date" datetime="2024-08-27">
+                August 27, 2024
+              </time>
+              <h3 class="news__subtitle">WE&nbsp;DONATE ONE WEEKS SUPPLY</h3>
+              <p class="news__descr">
+                We&nbsp;care about New Zealand children, and we&nbsp;want
+                to&nbsp;support our community by&nbsp;providing our children
+                in&nbsp;need with necessary vitamins to&nbsp;improve....
+              </p>
+              <button class="news__btn btn-sm btn--fill btn-reset">
+                Read more
+              </button>
+            </article>
+            <article class="news__item">
+              <img
+                class="news__img"
+                src="img/news-3.webp"
+                alt="we donate one weeks supply"
+              />
+              <time class="news__date" datetime="2024-08-28">
+                August 28, 2024
+              </time>
+              <h3 class="news__subtitle">WE&nbsp;DONATE ONE WEEKS SUPPLY</h3>
+              <p class="news__descr">
+                We&nbsp;care about New Zealand children, and we&nbsp;want
+                to&nbsp;support our community by&nbsp;providing our children
+                in&nbsp;need with necessary vitamins to&nbsp;improve....
+              </p>
+              <button class="news__btn btn-sm btn--fill btn-reset">
+                Read more
+              </button>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="social-media">
+        <h2 class="social-media__title section-title">#GOOD4ME</h2>
+        <div class="splide">
+          <div class="splide__track">
+            <ul class="social-media__list splide__list">
+              <li class="social-media__item splide__slide">
+                <img
+                  class="social-media__img"
+                  src="img/card-1.webp"
+                  alt="social media image"
+                />
+              </li>
+              <li class="social-media__item splide__slide">
+                <img
+                  class="social-media__img"
+                  src="img/card-2.webp"
+                  alt="social media image"
+                />
+              </li>
+              <li class="social-media__item splide__slide">
+                <img
+                  class="social-media__img"
+                  src="img/card-3.webp"
+                  alt="social media image"
+                />
+              </li>
+              <li class="social-media__item splide__slide">
+                <img
+                  class="social-media__img"
+                  src="img/card-4.webp"
+                  alt="social media image"
+                />
+              </li>
+              <li class="social-media__item splide__slide">
+                <img
+                  class="social-media__img"
+                  src="img/card-5.webp"
+                  alt="social media image"
+                />
+              </li>
+              <li class="social-media__item splide__slide">
+                <img
+                  class="social-media__img"
+                  src="img/card-6.webp"
+                  alt="social media image"
+                />
+              </li>
+              <li class="social-media__item splide__slide">
+                <img
+                  class="social-media__img"
+                  src="img/card-7.webp"
+                  alt="social media image"
+                />
+              </li>
+              <li class="social-media__item splide__slide">
+                <img
+                  class="social-media__img"
+                  src="img/card-8.webp"
+                  alt="social media image"
+                />
+              </li>
+              <li class="social-media__item splide__slide">
+                <img
+                  class="social-media__img"
+                  src="img/card-9.webp"
+                  alt="social media image"
+                />
+              </li>
+              <li class="social-media__item splide__slide">
+                <img
+                  class="social-media__img"
+                  src="img/card-10.webp"
+                  alt="social media image"
+                />
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__top flex">
+          <div class="footer__contant">
+            <a class="logo footer__logo" href="#!" aria-label="Logotype">
+              <img
+                class="footer__logo-img"
+                src="icons/logo.png"
+                alt="Logotype"
+              />
+            </a>
+            <p class="footer__descr">
+              Good health is&nbsp;important, so&nbsp;all of&nbsp;our products
+              have been carefully designed to&nbsp;bring out the best
+              in&nbsp;you.
+            </p>
+          </div>
+          <div class="subscribe footer__subscribe">
+            <div class="subscribe__contant">
+              <h3 class="subscribe__title">Keep In&nbsp;Touch</h3>
+              <p class="subscribe__descr">
+                Subscribe to&nbsp;receive new product updates, be&nbsp;the first
+                to&nbsp;know about sales, and more.
+              </p>
+            </div>
+            <form action="#" class="subscribe__form footer__form flex">
+              <input
+                class="subscribe__form-input"
+                type="email"
+                placeholder="Enter your email address"
+              />
+              <button
+                class="subscribe__form-btn btn-reset"
+                aria-label="Enter email"
+              >
+                Subscribe
+              </button>
+            </form>
+          </div>
+          <div class="footer__links">
+            <h3 class="footer__links-title">MORE INFO</h3>
+            <nav class="footer__nav">
+              <ul class="footer__nav-list list-reset">
+                <li class="footer__nav-item">
+                  <a class="footer__nav-link" href="#!">
+                    Shipping &amp;&nbsp;Delivery
+                  </a>
+                </li>
+                <li class="footer__nav-item">
+                  <a class="footer__nav-link" href="#!"> Refund Policy </a>
+                </li>
+                <li class="footer__nav-item">
+                  <a class="footer__nav-link" href="#!"> Partner Program </a>
+                </li>
+                <li class="footer__nav-item">
+                  <a class="footer__nav-link" href="#!"> Wholesale Portal </a>
+                </li>
+                <li class="footer__nav-item">
+                  <a class="footer__nav-link" href="#!">
+                    You Buy, We&nbsp;Donate
+                  </a>
+                </li>
+                <li class="footer__nav-item">
+                  <a class="footer__nav-link" href="#!"> Privacy Policy </a>
+                </li>
+                <li class="footer__nav-item">
+                  <a class="footer__nav-link" href="#!">
+                    Terms &amp;&nbsp;Conditions
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="footer__bottom flex">
+          <ul class="footer__social list-reset flex">
+            <li class="footer__social-item">
+              <a class="footer__social-link" href="#!" aria-label="facebook">
+                <svg
+                  width="8"
+                  height="14"
+                  viewbox="0 0 8 14"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    class="footer__social-icon"
+                    d="M7.28408 0.00291293L5.4686 0C3.42896 0 2.11086 1.35233 2.11086 3.44542V5.03399H0.285468C0.127732 5.03399 0 5.16187 0 5.3196V7.62126C0 7.77899 0.127878 7.90672 0.285468 7.90672H2.11086V13.7145C2.11086 13.8723 2.23859 14 2.39633 14H4.77794C4.93568 14 5.06341 13.8721 5.06341 13.7145V7.90672H7.19772C7.35545 7.90672 7.48318 7.77899 7.48318 7.62126L7.48406 5.3196C7.48406 5.24386 7.45391 5.17133 7.40046 5.11773C7.347 5.06414 7.27418 5.03399 7.19844 5.03399H5.06341V3.68734C5.06341 3.04008 5.21765 2.71151 6.0608 2.71151L7.28379 2.71107C7.44138 2.71107 7.56911 2.58319 7.56911 2.4256V0.288381C7.56911 0.130936 7.44153 0.00320423 7.28408 0.00291293Z"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li class="footer__social-item">
+              <a class="footer__social-link" href="#!" aria-label="instagram">
+                <svg
+                  width="14"
+                  height="14"
+                  viewbox="0 0 14 14"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    class="footer__social-icon"
+                    d="M7.13781 14C7.09145 14 7.04509 14 6.99842 13.9998C5.90103 14.0025 4.88707 13.9746 3.90098 13.9146C2.99693 13.8595 2.1717 13.5471 1.51438 13.0111C0.880129 12.494 0.447007 11.7947 0.227082 10.9329C0.0356752 10.1827 0.025528 9.44619 0.0158081 8.73386C0.00875856 8.22276 0.00149537 7.61714 0 7.00126C0.00149537 6.38282 0.00875856 5.7772 0.0158081 5.2661C0.025528 4.55388 0.0356752 3.81742 0.227082 3.06706C0.447007 2.2053 0.880129 1.50601 1.51438 0.988825C2.1717 0.452843 2.99693 0.140418 3.90109 0.0854102C4.88717 0.0254888 5.90135 -0.00249595 7.00109 0.000174347C8.09879 -0.00217551 9.11244 0.0254888 10.0985 0.0854102C11.0026 0.140418 11.8278 0.452843 12.4851 0.988825C13.1195 1.50601 13.5525 2.2053 13.7724 3.06706C13.9638 3.81731 13.974 4.55388 13.9837 5.2661C13.9907 5.7772 13.9981 6.38282 13.9995 6.9987V7.00126C13.9981 7.61714 13.9907 8.22276 13.9837 8.73386C13.974 9.44608 13.9639 10.1825 13.7724 10.9329C13.5525 11.7947 13.1195 12.494 12.4851 13.0111C11.8278 13.5471 11.0026 13.8595 10.0985 13.9146C9.1542 13.972 8.18413 14 7.13781 14ZM6.99842 12.906C8.07796 12.9086 9.06918 12.8814 10.0321 12.8228C10.7157 12.7813 11.3084 12.5594 11.7939 12.1635C12.2428 11.7974 12.5519 11.2924 12.7126 10.6625C12.872 10.0379 12.8812 9.36736 12.89 8.7189C12.897 8.21123 12.9043 7.60988 12.9058 6.99998C12.9043 6.38998 12.897 5.78873 12.89 5.28106C12.8812 4.6326 12.872 3.96204 12.7126 3.3374C12.5519 2.70743 12.2428 2.20242 11.7939 1.83638C11.3084 1.44053 10.7157 1.21868 10.0321 1.17713C9.06918 1.11849 8.07796 1.09147 7.00098 1.09382C5.92165 1.09126 4.93033 1.11849 3.96742 1.17713C3.28382 1.21868 2.69112 1.44053 2.20556 1.83638C1.75673 2.20242 1.44762 2.70743 1.28687 3.3374C1.12751 3.96204 1.11832 4.6325 1.10945 5.28106C1.10251 5.78916 1.09525 6.39083 1.09375 7.00126C1.09525 7.60902 1.10251 8.2108 1.10945 8.7189C1.11832 9.36736 1.12751 10.0379 1.28687 10.6625C1.44762 11.2924 1.75673 11.7974 2.20556 12.1635C2.69112 12.5593 3.28382 12.7812 3.96742 12.8227C4.93033 12.8814 5.92186 12.9087 6.99842 12.906ZM6.97235 10.418C5.08777 10.418 3.55438 8.88468 3.55438 6.99998C3.55438 5.11529 5.08777 3.582 6.97235 3.582C8.85705 3.582 10.3903 5.11529 10.3903 6.99998C10.3903 8.88468 8.85705 10.418 6.97235 10.418ZM6.97235 4.67576C5.69083 4.67576 4.64813 5.71845 4.64813 6.99998C4.64813 8.28151 5.69083 9.32421 6.97235 9.32421C8.25399 9.32421 9.29658 8.28151 9.29658 6.99998C9.29658 5.71845 8.25399 4.67576 6.97235 4.67576ZM10.7731 2.48825C10.3202 2.48825 9.95283 2.85547 9.95283 3.30856C9.95283 3.76166 10.3202 4.12888 10.7731 4.12888C11.2262 4.12888 11.5935 3.76166 11.5935 3.30856C11.5935 2.85547 11.2262 2.48825 10.7731 2.48825Z"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li class="footer__social-item">
+              <a class="footer__social-link" href="#!" aria-label="twitter">
+                <svg
+                  width="18"
+                  height="14"
+                  viewbox="0 0 18 14"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    class="footer__social-icon"
+                    d="M17.2308 1.65738C16.59 1.93846 15.9072 2.12477 15.1954 2.21523C15.9277 1.778 16.4866 1.09092 16.7494 0.262769C16.0666 0.669846 15.3128 0.957385 14.5094 1.11785C13.8611 0.427539 12.9371 0 11.9291 0C9.97338 0 8.39892 1.58738 8.39892 3.53339C8.39892 3.81339 8.42262 4.08262 8.48077 4.33892C5.544 4.19569 2.94538 2.78815 1.19969 0.644C0.894923 1.17277 0.716154 1.778 0.716154 2.42954C0.716154 3.65292 1.34615 4.73738 2.28523 5.36523C1.71769 5.35446 1.16092 5.18969 0.689231 4.93015C0.689231 4.94092 0.689231 4.95492 0.689231 4.96892C0.689231 6.68554 1.91369 8.11139 3.51938 8.43985C3.23185 8.51846 2.91846 8.55615 2.59323 8.55615C2.36708 8.55615 2.13877 8.54323 1.92446 8.49585C2.38215 9.89477 3.68092 10.9232 5.22523 10.9566C4.02339 11.8968 2.49738 12.4632 0.845385 12.4632C0.555692 12.4632 0.277846 12.4503 0 12.4148C1.56477 13.4238 3.41923 14 5.41908 14C11.9194 14 15.4732 8.61539 15.4732 3.948C15.4732 3.79185 15.4678 3.64108 15.4603 3.49138C16.1614 2.99385 16.7505 2.37246 17.2308 1.65738Z"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li class="footer__social-item">
+              <a class="footer__social-link" href="#!" aria-label="pinterest">
+                <svg
+                  width="12"
+                  height="14"
+                  viewbox="0 0 12 14"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    class="footer__social-icon"
+                    d="M5.87764 0C2.04059 0 0 2.45886 0 5.13998C0 6.38341 0.694781 7.93398 1.80696 8.42576C1.97584 8.50188 2.06772 8.46951 2.10535 8.31288C2.1386 8.19387 2.28473 7.62072 2.35561 7.35033C2.37748 7.2637 2.36611 7.18845 2.2961 7.10707C1.92684 6.68005 1.6337 5.90214 1.6337 5.17236C1.6337 3.3024 3.12039 1.48669 5.65013 1.48669C7.83773 1.48669 9.36817 2.90776 9.36817 4.94047C9.36817 7.23745 8.15274 8.82652 6.5733 8.82652C5.69913 8.82652 5.0481 8.14049 5.25461 7.29171C5.504 6.28103 5.99315 5.19424 5.99315 4.46533C5.99315 3.81167 5.62388 3.2709 4.8696 3.2709C3.97968 3.2709 3.25777 4.15206 3.25777 5.33512C3.25777 6.08678 3.52378 6.5943 3.52378 6.5943C3.52378 6.5943 2.64349 10.1505 2.47986 10.8146C2.20335 11.939 2.51749 13.76 2.54462 13.9166C2.56124 14.0033 2.65837 14.0304 2.71262 13.9595C2.79925 13.8458 3.8633 12.3276 4.16169 11.2303C4.27019 10.8304 4.71559 9.20892 4.71559 9.20892C5.00873 9.73832 5.85489 10.182 6.75618 10.182C9.4373 10.182 11.3746 7.82548 11.3746 4.9011C11.365 2.09747 8.96566 0 5.87764 0Z"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li class="footer__social-item">
+              <a class="footer__social-link" href="#!" aria-label="youtube">
+                <svg
+                  width="21"
+                  height="14"
+                  viewbox="0 0 21 14"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    class="footer__social-icon"
+                    d="M19.4982 1.34909C18.9458 0.366545 18.3464 0.185818 17.1258 0.117091C15.9065 0.0343636 12.8405 0 10.1844 0C7.52309 0 4.45582 0.0343637 3.23782 0.115818C2.01982 0.185818 1.41909 0.365273 0.861636 1.34909C0.292727 2.33036 0 4.02055 0 6.99618C0 6.99873 0 7 0 7C0 7.00255 0 7.00382 0 7.00382V7.00636C0 9.96927 0.292727 11.6722 0.861636 12.6433C1.41909 13.6258 2.01855 13.804 3.23655 13.8867C4.45582 13.958 7.52309 14 10.1844 14C12.8405 14 15.9065 13.958 17.1271 13.888C18.3476 13.8053 18.9471 13.6271 19.4995 12.6445C20.0735 11.6735 20.3636 9.97054 20.3636 7.00764C20.3636 7.00764 20.3636 7.00382 20.3636 7.00127C20.3636 7.00127 20.3636 6.99873 20.3636 6.99745C20.3636 4.02055 20.0735 2.33036 19.4982 1.34909ZM7.63636 10.8182V3.18182L14 7L7.63636 10.8182Z"
+                  />
+                </svg>
+              </a>
+            </li>
+          </ul>
+          <div class="owner">
+            <span class="owner__date"> &#169; 2021, </span>
+            <span class="owner__brand"> GOOD4ME. </span>
+            <span class="owner__sign"> Powered by Shopify </span>
+          </div>
+          <div class="footer__payments">
+            <img src="/icons/pay.png" alt="payment methods" />
+          </div>
         </div>
       </div>
-    </div>
-    <div id="back_to_top" class="back-to-top">
-      <svg height="20px" width="20px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
-        xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0 0 49.656 49.656" xml:space="preserve">
-        <g>
-          <polygon style="fill:#f6623e;"
-            points="48.242,35.122 45.414,37.95 24.828,17.364 4.242,37.95 1.414,35.122 24.828,11.707 	" />
-          <path style="fill:#f6623e;" d="M45.414,39.363L24.828,18.778L4.242,39.363L0,35.121l24.828-24.828l24.828,24.828L45.414,39.363z
-        M24.828,15.95l20.586,20.585l1.414-1.414l-22-22l-22,22l1.414,1.414L24.828,15.95z" />
-        </g>
-      </svg>
-    </div>
-  </footer>
+      <div id="back_to_top" class="back-to-top">
+        <svg
+          height="20px"
+          width="20px"
+          version="1.1"
+          id="Capa_1"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          viewbox="0 0 49.656 49.656"
+          xml:space="preserve"
+        >
+          <g>
+            <polygon
+              style="fill: #f6623e"
+              points="48.242,35.122 45.414,37.95 24.828,17.364 4.242,37.95 1.414,35.122 24.828,11.707 	"
+            />
+            <path
+              style="fill: #f6623e"
+              d="M45.414,39.363L24.828,18.778L4.242,39.363L0,35.121l24.828-24.828l24.828,24.828L45.414,39.363z
+        M24.828,15.95l20.586,20.585l1.414-1.414l-22-22l-22,22l1.414,1.414L24.828,15.95z"
+            />
+          </g>
+        </svg>
+      </div>
+    </footer>
 
-  <script src="js/currency.js"></script>
-  <script src="js/login-form.js"></script>
-  <script src="js/search-form.js"></script>
-  <script src="js/reviews-slider.js"></script>
-  <script src="js/splide.js"></script>
-  <script src="js/main.js"></script>
-</body>
-
+    <script src="js/currency.js"></script>
+    <script src="js/login-form.js"></script>
+    <script src="js/search-form.js"></script>
+    <script src="js/reviews-slider.js"></script>
+    <script src="js/splide.js"></script>
+    <script src="js/main.js"></script>
+  </body>
 </html>
